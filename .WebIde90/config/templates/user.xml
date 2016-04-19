@@ -1,0 +1,256 @@
+<templateSet group="user">
+  <template name="bitrix AddMessage2Log" value="ob_start();&#10;print_r($END$);&#10;$buffer = ob_get_clean();&#10;$buffer .= &quot;\n&quot;;&#10;AddMessage2Log($buffer);" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="XML_TEXT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="Twig" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JSX_HTML" value="false" />
+      <option name="JS_STATEMENT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="PHP Comment" value="false" />
+      <option name="PHP String Literal" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="bitrix cache" value="$obCache = new \CPHPCache;&#10;&#10;$strCacheID = $propCode;&#10;$strCacheDir = str_replace('::', '/', __METHOD__);&#10;&#10;if ($obCache-&gt;InitCache(36000000, $strCacheID, $strCacheDir)) {&#10;&#10;&#9;$map = $obCache-&gt;GetVars();&#10;&#10;} elseif ($obCache-&gt;StartDataCache()) {&#10;&#10;&#9;$map = array();&#10;&#10;&#9;/** @noinspection PhpDynamicAsStaticMethodCallInspection */&#10;&#9;$dbPopular = \CIblockElement::GetList(&#10;&#9;&#9;array('PROPERTY_RATING_BUY' =&gt; 'DESC'),&#10;&#9;&#9;array(&#10;&#9;&#9;&#9;'IBLOCK_ID'            =&gt; $this-&gt;iBlockIds[$propCode],&#10;&#9;&#9;&#9;'XML_ID'               =&gt; $arXmlIds,&#10;&#9;&#9;&#9;'!PROPERTY_RATING_BUY' =&gt; false&#10;&#9;&#9;),&#10;&#9;&#9;false,&#10;&#9;&#9;array('nTopCount' =&gt; 10),&#10;&#9;&#9;array('XML_ID')&#10;&#9;);&#10;&#9;while ($arPopular = $dbPopular-&gt;Fetch()) {&#10;&#9;&#9;$map[] = $arPopular['XML_ID'];&#10;&#9;}&#10;&#10;&#9;$obCache-&gt;EndDataCache($map);&#10;}&#10;" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="XML_TEXT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="Twig" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JSX_HTML" value="false" />
+      <option name="JS_STATEMENT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="PHP Comment" value="false" />
+      <option name="PHP String Literal" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="php pre print_r" value="echo '&lt;pre&gt;';&#10;print_r($END$);&#10;echo '&lt;/pre&gt;';" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="XML_TEXT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="Twig" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JSX_HTML" value="false" />
+      <option name="JS_STATEMENT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="PHP Comment" value="false" />
+      <option name="PHP String Literal" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="bitrix ajax" value="&lt;?&#10;error_reporting(0);&#10;ini_set('display_errors', FALSE);&#10;ini_set('display_startup_errors', FALSE);&#10;define('NO_KEEP_STATISTIC', true);&#10;define('PUBLIC_AJAX_MODE', true);&#10;define('STOP_STATISTICS', true);&#10;define('NO_AGENT_STATISTIC', true);&#10;define('NO_AGENT_CHECK', true);&#10;&#10;require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/prolog_before.php');&#10;&#10;$APPLICATION-&gt;IncludeComponent(&#10;&#9;'bitrix:catalog$END$',&#10;&#9;'',&#10;&#9;array(),&#10;&#9;false,&#10;&#9;array(&#10;&#9;&#9;'HIDE_ICONS' =&gt; 'Y',&#10;&#9;)&#10;);&#10;&#10;require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/epilog_after.php');&#10;?&gt;" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="bitrix api require" value="&lt;?&#10;require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/prolog_before.php');&#10;&#10;$END$&#10;&#10;require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/epilog_after.php');&#10;?&gt;" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="bitrix areas" value="&lt;?php&#10;$this-&gt;AddEditAction(&#10;&#9;$arItem['ID'],&#10;&#9;$arItem['EDIT_LINK'],&#10;&#9;CIBlock::GetArrayByID($arItem['IBLOCK_ID'], 'ELEMENT_EDIT')&#10;);&#10;$this-&gt;AddDeleteAction(&#10;&#9;$arItem['ID'],&#10;&#9;$arItem['DELETE_LINK'],&#10;&#9;CIBlock::GetArrayByID($arItem['IBLOCK_ID'], 'ELEMENT_DELETE'),&#10;&#9;array('CONFIRM' =&gt; GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM'))&#10;);&#10;?&gt;&#10;id='&lt;?php echo $this-&gt;GetEditAreaId($arItem['ID']); ?&gt;'" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="bitrix iblock element phototes in prop resize" value="/**&#10; * Ресайзим большие фото, присланные через форму 'Добавить свой пункт проката'&#10; *&#10; * @param mixed $arFields&#10; */&#10;function addPunktResizePhotoes(&amp;$arFields) {&#10;&#9;if (!defined('ADD_PUNKT_IBLOCK_ID')) {&#10;&#9;&#9;throw new Exception('ADD_PUNKT_IBLOCK_ID is not defined');&#10;&#9;}&#10;&#9;if (!defined('ADD_PUNKT_PHOTO_PROP_ID')) {&#10;&#9;&#9;throw new Exception('ADD_PUNKT_PHOTO_PROP_ID is not defined');&#10;&#9;}&#10;&#9;if ($arFields['IBLOCK_ID'] == ADD_PUNKT_IBLOCK_ID) {&#10;&#9;&#9;if (&#10;&#9;&#9;&#9;!empty($arFields['PROPERTY_VALUES'][ADD_PUNKT_PHOTO_PROP_ID])&#10;&#9;&#9;&#9;&amp;&amp; is_array($arFields['PROPERTY_VALUES'][ADD_PUNKT_PHOTO_PROP_ID])&#10;&#9;&#9;) {&#10;&#9;&#9;&#9;foreach ($arFields['PROPERTY_VALUES'][ADD_PUNKT_PHOTO_PROP_ID] as &amp;$photo) {&#10;&#9;&#9;&#9;&#9;if (!empty($photo['size'])) {&#10;&#9;&#9;&#9;&#9;&#9;CAllFile::ResizeImage(&#10;&#9;&#9;&#9;&#9;&#9;&#9;$photo,&#10;&#9;&#9;&#9;&#9;&#9;&#9;array(&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;'width' =&gt; 1200,&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;'height' =&gt; 1200&#10;&#9;&#9;&#9;&#9;&#9;&#9;),&#10;&#9;&#9;&#9;&#9;&#9;&#9;BX_RESIZE_IMAGE_PROPORTIONAL&#10;&#9;&#9;&#9;&#9;&#9;);&#10;&#9;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;}&#10;&#9;&#9;}&#10;&#9;}&#10;}" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="bitrix image resize" value="if (empty($arResult['ITEMS'])) {&#10;&#9;return;&#10;}&#10;&#10;foreach ($arResult['ITEMS'] as $key =&gt; $arItem) {&#10;&#9;if (&#10;&#9;&#9;!empty($arItem['PREVIEW_PICTURE'])&#10;&#9;&#9;&amp;&amp; is_array($arItem['PREVIEW_PICTURE'])&#10;&#9;) {&#10;&#9;&#9;if (!is_object($CFile)) $CFile = new CFile;&#10;&#9;&#9;$arResult['ITEMS'][$key]['PREVIEW_PICTURE_CUSTOM'] = $CFile-&gt;ResizeImageGet(&#10;&#9;&#9;&#9;$arItem['PREVIEW_PICTURE'],&#10;&#9;&#9;&#9;array(&#10;&#9;&#9;&#9;&#9;'width' =&gt; 219$END$,&#10;&#9;&#9;&#9;&#9;'height' =&gt; 162,&#10;&#9;&#9;&#9;),&#10;&#9;&#9;&#9;BX_RESIZE_IMAGE_EXACT,&#10;&#9;&#9;&#9;// BX_RESIZE_IMAGE_PROPORTIONAL,&#10;&#9;&#9;&#9;// BX_RESIZE_IMAGE_PROPORTIONAL_ALT,&#10;&#9;&#9;&#9;true&#10;&#9;&#9;);&#10;&#9;}&#10;}" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="bitrix includefile" value="&lt;?$APPLICATION-&gt;IncludeFile(&#10;&#9;SITE_DIR . &quot;includes/logo.php$END$&quot;,&#10;&#9;array(),&#10;&#9;array(&#10;&#9;&#9;&quot;MODE&quot; =&gt; &quot;html&quot;,&#10;&#9;&#9;&quot;NAME&quot; =&gt; &quot;логотип&quot;&#10;&#9;)&#10;);?&gt;" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="bitrix include module" value="if (!\Bitrix\Main\Loader::includeModule('iblock')) {&#10;&#9;ShowError('Module iblock is not loaded');&#10;&#9;return;&#10;}" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="bitrix log define" value="define('LOG_FILENAME', $_SERVER['DOCUMENT_ROOT'] . '/log.txt');" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="bitrix logo" value="&lt;?&#10;if (!$is['front']) {&#10;&#9;?&gt;&lt;a href='&lt;?= SITE_DIR ?&gt;'&gt;&lt;?&#10;}&#10;?&gt;&#10;&lt;?$APPLICATION-&gt;IncludeComponent(&#10;&#9;&quot;bitrix:main.include&quot;,&#10;&#9;&quot;,&#10;&#9;array(&#10;&#9;&#9;&quot;AREA_FILE_SHOW&quot; =&gt; &quot;file&quot;,&#10;&#9;&#9;&quot;PATH&quot; =&gt; SITE_DIR . &quot;includes/logo.php&quot;&#10;&#9;),&#10;&#9;false&#10;);?&gt;&#10;&lt;?&#10;if (!$is['front']) {&#10;&#9;?&gt;&lt;/a&gt;&lt;?&#10;}&#10;?&gt;" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="bitrix main.include" value="&lt;?$APPLICATION-&gt;IncludeComponent(&#10;&#9;'bitrix:main.include',&#10;&#9;'',&#10;&#9;array(&#10;&#9;&#9;'AREA_FILE_SHOW' =&gt; 'file',&#10;&#9;&#9;'PATH' =&gt; SITE_DIR . 'includes/logo.php$END$'&#10;&#9;),&#10;&#9;false&#10;);?&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="bitrix main.include inc" value="&lt;?$APPLICATION-&gt;IncludeComponent(&#10;&#9;&quot;bitrix:main.include&quot;,&#10;&#9;&quot;&quot;,&#10;&#9;Array(&#10;&#9;&#9;&quot;AREA_FILE_SHOW&quot; =&gt; &quot;page&quot;,&#10;&#9;&#9;&quot;AREA_FILE_SUFFIX&quot; =&gt; &quot;inc&quot;,&#10;&#9;&#9;&quot;COMPONENT_TEMPLATE&quot; =&gt; &quot;.default&quot;,&#10;&#9;&#9;&quot;EDIT_TEMPLATE&quot; =&gt; &quot;&quot;&#10;&#9;)&#10;);?&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="bitrix menu" value="&lt;?$APPLICATION-&gt;IncludeComponent(&quot;bitrix:menu&quot;, &quot;header&quot;, Array(&#10;&#9;&#9;&quot;ROOT_MENU_TYPE&quot; =&gt; &quot;header&quot;,&#9;// Тип меню для первого уровня&#10;&#9;&#9;&quot;MENU_CACHE_TYPE&quot; =&gt; &quot;A&quot;,&#9;// Тип кеширования&#10;&#9;&#9;&quot;MENU_CACHE_TIME&quot; =&gt; &quot;3600&quot;,&#9;// Время кеширования (сек.)&#10;&#9;&#9;&quot;MENU_CACHE_USE_GROUPS&quot; =&gt; &quot;Y&quot;,&#9;// Учитывать права доступа&#10;&#9;&#9;&quot;MENU_CACHE_GET_VARS&quot; =&gt; &quot;&quot;,&#9;// Значимые переменные запроса&#10;&#9;&#9;&quot;MAX_LEVEL&quot; =&gt; &quot;1&quot;,&#9;// Уровень вложенности меню&#10;&#9;&#9;&quot;CHILD_MENU_TYPE&quot; =&gt; &quot;header&quot;,&#9;// Тип меню для остальных уровней&#10;&#9;&#9;&quot;USE_EXT&quot; =&gt; &quot;Y&quot;,&#9;// Подключать файлы с именами вида .тип_меню.menu_ext.php&#10;&#9;&#9;&quot;DELAY&quot; =&gt; &quot;N&quot;,&#9;// Откладывать выполнение шаблона меню&#10;&#9;&#9;&quot;ALLOW_MULTI_SELECT&quot; =&gt; &quot;N&quot;,&#9;// Разрешить несколько активных пунктов одновременно&#10;&#9;),&#10;&#9;false&#10;);?&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="bitrix prolog included" value="if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="bitrix user auth" value="$CUser = new CUser;&#10;$CUser-&gt;Authorize(1);" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="CSS - background base64" value="background: url(data:image/png;base64,) no-repeat;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS_PROPERTY_VALUE" value="true" />
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+      <option name="CSS_RULESET_LIST" value="true" />
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="CSS - border-radius" value="-webkit-border-radius: 5px;&#10;-moz-border-radius: 5px;&#10;border-radius: 5px;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS_PROPERTY_VALUE" value="true" />
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+      <option name="CSS_RULESET_LIST" value="true" />
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="CSS - box-shadow" value="-webkit-box-shadow: 1px 1px 3px #DDD;&#10;   -moz-box-shadow: 1px 1px 3px #DDD;&#10;&#9;&#9;box-shadow: 1px 1px 3px #DDD;" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="CSS_PROPERTY_VALUE" value="true" />
+      <option name="CSS_DECLARATION_BLOCK" value="true" />
+      <option name="CSS_RULESET_LIST" value="true" />
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="jQuery console.log" value="console.log($END$);" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="jQuery wrappper" value="(function($) {&#10;&#9;$(document).ready(function() {&#10;&#10;&#9;&#9;$END$&#10;&#10;&#9;});&#10;})(jQuery);" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="JS - scroll to anchor" value="$('.top__menu-link').on('click', function(event) {&#10;&#9;event.preventDefault();&#10;&#9;var href = $(this).attr('href');&#10;&#9;href = href.replace('#', '');&#10;&#9;var anchor = $('a[name=' + href + ']');&#10;&#9;if (anchor.length) {&#10;&#9;&#9;$('html, body').animate({&#10;&#9;&#9;&#9;scrollTop: anchor.eq(0).offset().top&#10;&#9;&#9;}, 500);&#10;&#9;}&#10;});" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="php curl get http code" value=" = curl_init();&#10;curl_setopt(,  CURLOPT_RETURNTRANSFER, TRUE);&#10; = curl_exec();&#10; = curl_getinfo(, CURLINFO_HTTP_CODE);&#10;if ( != 200) {&#10;&#10;}&#10;curl_close();" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="php email test" value="&lt;?&#10;$email = &quot;hobocta@gmail.com&quot;;&#10;$headers = 'From: ' . $email;&#10;$result = mail($email, 'Test email using PHP', 'This is a test email message', $headers);&#10;echo &quot;&lt;pre&gt;&quot;;&#10;var_dump($result);&#10;echo &quot;&lt;/pre&gt;&quot;;&#10;?&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="php log to file" value="$file = $_SERVER['DOCUMENT_ROOT'] . '/log.txt';&#10;ob_start();&#10;var_dump($arFields);&#10;$buffer = ob_get_clean();&#10;$buffer .= $buffer . &quot;\n&quot;;&#10;file_put_contents($file, $buffer);" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="php pre var_dump" value="echo '&lt;pre&gt;';&#10;var_dump($END$);&#10;echo '&lt;/pre&gt;';" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="noinspection" value="/** @noinspection PhpDynamicAsStaticMethodCallInspection */" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="XML_TEXT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="Twig" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JSX_HTML" value="false" />
+      <option name="JS_STATEMENT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="PHP Comment" value="false" />
+      <option name="PHP String Literal" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
+    </context>
+  </template>
+</templateSet>

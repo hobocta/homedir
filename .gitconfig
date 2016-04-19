@@ -1,0 +1,35 @@
+[user]
+	email = contact@site-home.ru
+	name = Антон Кондратов
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	mddiff = log --oneline --left-right master...dev
+	mddiff2 = log --oneline --left-right master...develop
+	dd = log --oneline --left-right dev...HEAD
+[core]
+	; for linux:
+	;autocrlf = input
+	; for windows:
+	autocrlf = true
+	safecrlf = warn
+	sharedRepository = true
+	filemode = false
+	pager = less -S
+	quotepath = false
+
+[color]
+	ui = auto
+[receive]
+	denyCurrentBranch = ignore
+[pack]
+	windowMemory = 10m
+	packSizeLimit = 20m
+	threads = 1
+[push]
+	default = matching
