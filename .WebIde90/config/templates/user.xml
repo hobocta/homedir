@@ -86,7 +86,7 @@
       <option name="OTHER" value="false" />
     </context>
   </template>
-  <template name="bitrix ajax" value="&lt;?&#10;error_reporting(0);&#10;ini_set('display_errors', FALSE);&#10;ini_set('display_startup_errors', FALSE);&#10;define('NO_KEEP_STATISTIC', true);&#10;define('PUBLIC_AJAX_MODE', true);&#10;define('STOP_STATISTICS', true);&#10;define('NO_AGENT_STATISTIC', true);&#10;define('NO_AGENT_CHECK', true);&#10;&#10;require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/prolog_before.php');&#10;&#10;$APPLICATION-&gt;IncludeComponent(&#10;&#9;'bitrix:catalog$END$',&#10;&#9;'',&#10;&#9;array(),&#10;&#9;false,&#10;&#9;array(&#10;&#9;&#9;'HIDE_ICONS' =&gt; 'Y',&#10;&#9;)&#10;);&#10;&#10;require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/epilog_after.php');&#10;?&gt;" toReformat="true" toShortenFQNames="true">
+  <template name="bitrix ajax" value="/**&#10; * @global $APPLICATION CMain&#10; */&#10;define('PUBLIC_AJAX_MODE', true);&#10;require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/prolog_before.php');&#10;" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="PHP" value="true" />
     </context>
@@ -251,6 +251,14 @@
       <option name="PHP String Literal" value="false" />
       <option name="HAML" value="false" />
       <option name="OTHER" value="false" />
+    </context>
+  </template>
+  <template name="jQuery ajax" value="$.ajax({&#10;&#9;url: '/personal/digital/ajax/getMultimediaLinks.php',&#10;&#9;data: {&#10;&#9;&#9;'type': type,&#10;&#9;&#9;'uid': uid&#10;&#9;},&#10;&#9;success: function(data) {&#10;&#9;}&#10;});&#10;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
 </templateSet>
