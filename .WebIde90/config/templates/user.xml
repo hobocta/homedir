@@ -106,7 +106,7 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="bitrix image resize" value="if (empty($arResult['ITEMS'])) {&#10;&#9;return;&#10;}&#10;&#10;foreach ($arResult['ITEMS'] as $key =&gt; $arItem) {&#10;&#9;if (&#10;&#9;&#9;!empty($arItem['PREVIEW_PICTURE'])&#10;&#9;&#9;&amp;&amp; is_array($arItem['PREVIEW_PICTURE'])&#10;&#9;) {&#10;&#9;&#9;if (!is_object($CFile)) $CFile = new CFile;&#10;&#9;&#9;$arResult['ITEMS'][$key]['PREVIEW_PICTURE_CUSTOM'] = $CFile-&gt;ResizeImageGet(&#10;&#9;&#9;&#9;$arItem['PREVIEW_PICTURE'],&#10;&#9;&#9;&#9;array(&#10;&#9;&#9;&#9;&#9;'width' =&gt; 219$END$,&#10;&#9;&#9;&#9;&#9;'height' =&gt; 162,&#10;&#9;&#9;&#9;),&#10;&#9;&#9;&#9;BX_RESIZE_IMAGE_EXACT,&#10;&#9;&#9;&#9;// BX_RESIZE_IMAGE_PROPORTIONAL,&#10;&#9;&#9;&#9;// BX_RESIZE_IMAGE_PROPORTIONAL_ALT,&#10;&#9;&#9;&#9;true&#10;&#9;&#9;);&#10;&#9;}&#10;}" toReformat="true" toShortenFQNames="true">
+  <template name="bitrix image resize" value="if (empty($arResult['ITEMS'])) {&#10;&#9;return;&#10;}&#10;&#10;foreach ($arResult['ITEMS'] as $key =&gt; $arItem) {&#10;&#9;if (&#10;&#9;&#9;!empty($arItem['PREVIEW_PICTURE'])&#10;&#9;&#9;&amp;&amp; is_array($arItem['PREVIEW_PICTURE'])&#10;&#9;) {&#10;&#9;&#9;if (!is_object($CFile)) $CFile = new CFile;&#10;&#9;&#9;$arResult['ITEMS'][$key]['PREVIEW_PICTURE_CUSTOM'] = $CFile-&gt;ResizeImageGet(&#10;&#9;&#9;&#9;$arItem['PREVIEW_PICTURE'],&#10;&#9;&#9;&#9;array(&#10;&#9;&#9;&#9;&#9;'width' =&gt; 219$END$,&#10;&#9;&#9;&#9;&#9;'height' =&gt; 162,&#10;&#9;&#9;&#9;),&#10;&#9;&#9;&#9;BX_RESIZE_IMAGE_EXACT,&#10;&#9;&#9;&#9;true&#10;&#9;&#9;);&#10;&#9;}&#10;}" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="PHP" value="true" />
     </context>
@@ -259,6 +259,11 @@
       <option name="JS_EXPRESSION" value="true" />
       <option name="JSX_HTML" value="true" />
       <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="bitrix template var and global comments" value="/** @var array $arParams */&#10;/** @var array $arResult */&#10;/** @global CMain $APPLICATION */&#10;/** @global CUser $USER */&#10;/** @global CDatabase $DB */&#10;/** @var CBitrixComponentTemplate $this */&#10;/** @var string $templateName */&#10;/** @var string $templateFile */&#10;/** @var string $templateFolder */&#10;/** @var string $componentPath */&#10;/** @var CBitrixComponent $component */&#10;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
     </context>
   </template>
 </templateSet>
