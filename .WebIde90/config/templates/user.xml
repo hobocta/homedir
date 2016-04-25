@@ -91,7 +91,7 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="bitrix api require" value="&lt;?&#10;require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/prolog_before.php');&#10;&#10;$END$&#10;&#10;require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/epilog_after.php');&#10;?&gt;" toReformat="true" toShortenFQNames="true">
+  <template name="bitrix api require" value="require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/prolog_before.php');&#10;&#10;$END$&#10;&#10;require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/epilog_after.php');" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="PHP" value="true" />
     </context>
