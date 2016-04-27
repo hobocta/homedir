@@ -48,5 +48,6 @@
 /.WebIde90/config/options/find.recents.xml
 /.WebIde90/config/options/availables.xml
 /.WebIde90/config/options/options.xml
+/.WebIde90/config/options/webServers.xml
 !/.WebIde90/config/plugins/
 !/.WebIde90/config/templates/
