@@ -261,7 +261,17 @@
       <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="bitrix template var and global comments" value="/** @var array $arParams */&#10;/** @var array $arResult */&#10;/** @global CMain $APPLICATION */&#10;/** @global CUser $USER */&#10;/** @global CDatabase $DB */&#10;/** @var CBitrixComponentTemplate $this */&#10;/** @var string $templateName */&#10;/** @var string $templateFile */&#10;/** @var string $templateFolder */&#10;/** @var string $componentPath */&#10;/** @var CBitrixComponent $component */&#10;" toReformat="false" toShortenFQNames="true">
+  <template name="bitrix var and global comments template.php" value="/** @var array $arParams */&#10;/** @var array $arResult */&#10;/** @global CMain $APPLICATION */&#10;/** @global CUser $USER */&#10;/** @global CDatabase $DB */&#10;/** @var string $templateName */&#10;/** @var string $templateFile */&#10;/** @var string $templateFolder */&#10;/** @var string $componentPath */&#10;/** @var CBitrixComponentTemplate $this */&#10;/** @var CBitrixComponent $component */&#10;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="bitrix var and global comments component_epilog.php" value="/** @var array $arParams */&#10;/** @var array $arResult */&#10;/** @var string $componentPath */&#10;/** @var string $epilogFile */&#10;/** @var string $templateName */&#10;/** @var string $templateFile */&#10;/** @var string $templateFolder */&#10;/** @var array $templateData */&#10;/** @global CMain $APPLICATION */&#10;/** @global CUser $USER */&#10;/** @global CDatabase $DB */&#10;/** @var CBitrixComponent $this */&#10;/** @var CBitrixComponent $component */&#10;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="bitrix var and global comments result_modifier.php" value="/** @var array $arParams */&#10;/** @var array $arResult */&#10;/** @global CMain $APPLICATION */&#10;/** @global CUser $USER */&#10;/** @global CDatabase $DB */&#10;/** @var CBitrixComponentTemplate $this */&#10;" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="PHP" value="true" />
     </context>
