@@ -46,7 +46,7 @@
     </indentOptions>
   </codeStyleSettings>
   <codeStyleSettings language="PHP">
-    <option name="RIGHT_MARGIN" value="80" />
+    <option name="RIGHT_MARGIN" value="120" />
     <option name="LINE_COMMENT_AT_FIRST_COLUMN" value="false" />
     <option name="BLANK_LINES_AFTER_PACKAGE" value="1" />
     <option name="CLASS_BRACE_STYLE" value="1" />
