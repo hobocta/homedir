@@ -261,19 +261,48 @@
       <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="bitrix var and global comments template.php" value="/** @var array $arParams */&#10;/** @var array $arResult */&#10;/** @global CMain $APPLICATION */&#10;/** @global CUser $USER */&#10;/** @global CDatabase $DB */&#10;/** @var string $templateName */&#10;/** @var string $templateFile */&#10;/** @var string $templateFolder */&#10;/** @var string $componentPath */&#10;/** @var CBitrixComponentTemplate $this */&#10;/** @var CBitrixComponent $component */&#10;" toReformat="false" toShortenFQNames="true">
+  <template name="bitrix var and global comments template.php" value="/** @var array $arParams */&#10;/** @var array $arResult */&#10;/** @global CMain $APPLICATION */&#10;/** @global CUser $USER */&#10;/** @global CDatabase $DB */&#10;/** @var string $templateName */&#10;/** @var string $templateFile */&#10;/** @var string $templateFolder */&#10;/** @var string $componentPath */&#10;/** @var CBitrixComponentTemplate $this */&#10;/** @var CBitrixComponent $component */" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="bitrix var and global comments component_epilog.php" value="/** @var array $arParams */&#10;/** @var array $arResult */&#10;/** @var string $componentPath */&#10;/** @var string $epilogFile */&#10;/** @var string $templateName */&#10;/** @var string $templateFile */&#10;/** @var string $templateFolder */&#10;/** @var array $templateData */&#10;/** @global CMain $APPLICATION */&#10;/** @global CUser $USER */&#10;/** @global CDatabase $DB */&#10;/** @var CBitrixComponent $this */&#10;/** @var CBitrixComponent $component */&#10;" toReformat="false" toShortenFQNames="true">
+  <template name="bitrix var and global comments component_epilog.php" value="/** @var array $arParams */&#10;/** @var array $arResult */&#10;/** @var string $componentPath */&#10;/** @var string $epilogFile */&#10;/** @var string $templateName */&#10;/** @var string $templateFile */&#10;/** @var string $templateFolder */&#10;/** @var array $templateData */&#10;/** @global CMain $APPLICATION */&#10;/** @global CUser $USER */&#10;/** @global CDatabase $DB */&#10;/** @var CBitrixComponent $this */&#10;/** @var CBitrixComponent $component */" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="bitrix var and global comments result_modifier.php" value="/** @var array $arParams */&#10;/** @var array $arResult */&#10;/** @global CMain $APPLICATION */&#10;/** @global CUser $USER */&#10;/** @global CDatabase $DB */&#10;/** @var CBitrixComponentTemplate $this */&#10;" toReformat="false" toShortenFQNames="true">
+  <template name="bitrix var and global comments result_modifier.php" value="/** @var array $arParams */&#10;/** @var array $arResult */&#10;/** @global CMain $APPLICATION */&#10;/** @global CUser $USER */&#10;/** @global CDatabase $DB */&#10;/** @var CBitrixComponentTemplate $this */" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="bitrix var and global comments page" value="/** @global CMain $APPLICATION */&#10;/** @global CUser $USER */&#10;/** @global CDatabase $DB */" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="XSL_TEXT" value="false" />
+      <option name="XML" value="false" />
+      <option name="XML_TEXT" value="false" />
+      <option name="JSON" value="false" />
+      <option name="SQL" value="false" />
+      <option name="JSP" value="false" />
+      <option name="CSS_PROPERTY_VALUE" value="false" />
+      <option name="CSS_DECLARATION_BLOCK" value="false" />
+      <option name="CSS_RULESET_LIST" value="false" />
+      <option name="CSS" value="false" />
+      <option name="Twig" value="false" />
+      <option name="CUCUMBER_FEATURE_FILE" value="false" />
+      <option name="JAVA_SCRIPT" value="false" />
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JSX_HTML" value="false" />
+      <option name="JS_STATEMENT" value="false" />
+      <option name="TypeScript" value="false" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="true" />
+      <option name="PHP Comment" value="false" />
+      <option name="PHP String Literal" value="false" />
+      <option name="HAML" value="false" />
+      <option name="OTHER" value="false" />
     </context>
   </template>
 </templateSet>
