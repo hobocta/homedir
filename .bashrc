@@ -38,9 +38,9 @@ else
 	if [ -n "${CHANGED}" ]; then
 		git st
 	else
-		echo 'gitmultipull'
+		echo 'gitmultipull:'
 		gitmultipull
-		echo 'gitmultiprune'
+		echo 'gitmultiprune:'
 		gitmultiprune
 		cd /f/projects
 	fi
