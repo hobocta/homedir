@@ -26,18 +26,20 @@ alias gitlogtoday='git log --pretty="%s" --since="0am"'
 alias cdsublimesnippets='cd "d:/Dropbox/Программы/#Portable/Sublime Text Build 3065 x64/Data/Packages/User/Snippets/sublime-snippets"'
 alias gitnewbranch='c:/Users/Anton/bash/gitnewbranch.sh'
 alias gitmultipull='c:/Users/Anton/bash/gitmultipull.sh'
+alias gitmultiprune='c:/Users/Anton/bash/gitmultiprune.sh'
 
 cd ~
 CHANGED=$(git status --porcelain)
 if [ -n "${CHANGED}" ]; then
-	git diff
+	git st
 else
 	cdsublimesnippets
 	CHANGED=$(git status --porcelain)
 	if [ -n "${CHANGED}" ]; then
-		git diff
+		git st
 	else
 		gitmultipull
+		gitmultiprune
 		cd /f/projects
 	fi
 fi
