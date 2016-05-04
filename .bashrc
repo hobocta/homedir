@@ -28,14 +28,14 @@ alias gitnewbranch='c:/Users/Anton/bash/gitnewbranch.sh'
 alias gitmultipull='c:/Users/Anton/bash/gitmultipull.sh'
 
 cd ~
-if ! git st -s; then
+if [[ 'git st -s' ]]; then
+	git st
+else
 	cdsublimesnippets
-	if ! git st -s; then
+	if [[ 'git st -s' ]]; then
+		git st
+	else
 		gitmultipull
 		cd /f/projects
-	else
-		git st
 	fi
-else
-	git st
 fi
