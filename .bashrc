@@ -22,12 +22,20 @@ alias tmp14="mkdir tmp && git log -14 --name-only --no-commit-id --pretty=\"form
 alias tmp15="mkdir tmp && git log -15 --name-only --no-commit-id --pretty=\"format:\" | sort | uniq | xargs -I % cp --parents % tmp"
 
 alias gitwary='git st | grep -v "\.php\|\.txt\|\.gif\|\.png\|\.css\|\.js\|\.jpg\|\.gitignore\|\.xml\|\.html\|\.ico\|\.config\|\.snp"'
-alias gitmurderpull='git reset --hard && git clean -df && git pull && echo "---" && git hist -3 && echo "---" && git st'
 alias gitlogtoday='git log --pretty="%s" --since="0am"'
 alias cdsublimesnippets='cd "d:/Dropbox/Программы/#Portable/Sublime Text Build 3065 x64/Data/Packages/User/Snippets/sublime-snippets"'
 alias gitnewbranch='c:/Users/Anton/bash/gitnewbranch.sh'
+alias gitmultipull='c:/Users/Anton/bash/gitmultipull.sh'
 
-cd ~ && git st -s
-cdsublimesnippets && git st -s
-
-cd f:/projects
+cd ~
+if ! git st -s; then
+	cdsublimesnippets
+	if ! git st -s; then
+		gitmultipull
+		cd /f/projects
+	else
+		git st
+	fi
+else
+	git st
+fi
