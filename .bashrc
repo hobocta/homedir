@@ -28,12 +28,14 @@ alias gitnewbranch='c:/Users/Anton/bash/gitnewbranch.sh'
 alias gitmultipull='c:/Users/Anton/bash/gitmultipull.sh'
 
 cd ~
-if [[ 'git st -s' ]]; then
-	git st
+CHANGED=$(git status --porcelain)
+if [ -n "${CHANGED}" ]; then
+	git diff
 else
 	cdsublimesnippets
-	if [[ 'git st -s' ]]; then
-		git st
+	CHANGED=$(git status --porcelain)
+	if [ -n "${CHANGED}" ]; then
+		git diff
 	else
 		gitmultipull
 		cd /f/projects
