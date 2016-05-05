@@ -98,7 +98,9 @@
   </template>
   <template name="bitrix areas" value="&lt;?php&#10;$this-&gt;AddEditAction(&#10;&#9;$arItem['ID'],&#10;&#9;$arItem['EDIT_LINK'],&#10;&#9;CIBlock::GetArrayByID($arItem['IBLOCK_ID'], 'ELEMENT_EDIT')&#10;);&#10;$this-&gt;AddDeleteAction(&#10;&#9;$arItem['ID'],&#10;&#9;$arItem['DELETE_LINK'],&#10;&#9;CIBlock::GetArrayByID($arItem['IBLOCK_ID'], 'ELEMENT_DELETE'),&#10;&#9;array('CONFIRM' =&gt; GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM'))&#10;);&#10;?&gt;&#10;id='&lt;?php echo $this-&gt;GetEditAreaId($arItem['ID']); ?&gt;'" toReformat="true" toShortenFQNames="true">
     <context>
-      <option name="PHP" value="true" />
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="PHP" value="false" />
     </context>
   </template>
   <template name="bitrix iblock element phototes in prop resize" value="/**&#10; * Ресайзим большие фото, присланные через форму 'Добавить свой пункт проката'&#10; *&#10; * @param mixed $arFields&#10; */&#10;function addPunktResizePhotoes(&amp;$arFields) {&#10;&#9;if (!defined('ADD_PUNKT_IBLOCK_ID')) {&#10;&#9;&#9;throw new Exception('ADD_PUNKT_IBLOCK_ID is not defined');&#10;&#9;}&#10;&#9;if (!defined('ADD_PUNKT_PHOTO_PROP_ID')) {&#10;&#9;&#9;throw new Exception('ADD_PUNKT_PHOTO_PROP_ID is not defined');&#10;&#9;}&#10;&#9;if ($arFields['IBLOCK_ID'] == ADD_PUNKT_IBLOCK_ID) {&#10;&#9;&#9;if (&#10;&#9;&#9;&#9;!empty($arFields['PROPERTY_VALUES'][ADD_PUNKT_PHOTO_PROP_ID])&#10;&#9;&#9;&#9;&amp;&amp; is_array($arFields['PROPERTY_VALUES'][ADD_PUNKT_PHOTO_PROP_ID])&#10;&#9;&#9;) {&#10;&#9;&#9;&#9;foreach ($arFields['PROPERTY_VALUES'][ADD_PUNKT_PHOTO_PROP_ID] as &amp;$photo) {&#10;&#9;&#9;&#9;&#9;if (!empty($photo['size'])) {&#10;&#9;&#9;&#9;&#9;&#9;CAllFile::ResizeImage(&#10;&#9;&#9;&#9;&#9;&#9;&#9;$photo,&#10;&#9;&#9;&#9;&#9;&#9;&#9;array(&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;'width' =&gt; 1200,&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;'height' =&gt; 1200&#10;&#9;&#9;&#9;&#9;&#9;&#9;),&#10;&#9;&#9;&#9;&#9;&#9;&#9;BX_RESIZE_IMAGE_PROPORTIONAL&#10;&#9;&#9;&#9;&#9;&#9;);&#10;&#9;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;}&#10;&#9;&#9;}&#10;&#9;}&#10;}" toReformat="true" toShortenFQNames="true">
@@ -113,7 +115,9 @@
   </template>
   <template name="bitrix includefile" value="&lt;?$APPLICATION-&gt;IncludeFile(&#10;&#9;SITE_DIR . &quot;includes/logo.php$END$&quot;,&#10;&#9;array(),&#10;&#9;array(&#10;&#9;&#9;&quot;MODE&quot; =&gt; &quot;html&quot;,&#10;&#9;&#9;&quot;NAME&quot; =&gt; &quot;логотип&quot;&#10;&#9;)&#10;);?&gt;" toReformat="true" toShortenFQNames="true">
     <context>
-      <option name="PHP" value="true" />
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="PHP" value="false" />
     </context>
   </template>
   <template name="bitrix include module" value="if (!\Bitrix\Main\Loader::includeModule('iblock')) {&#10;&#9;ShowError('Module iblock is not loaded');&#10;&#9;return;&#10;}" toReformat="false" toShortenFQNames="true">
@@ -128,22 +132,31 @@
   </template>
   <template name="bitrix logo" value="&lt;?&#10;if (!$is['front']) {&#10;&#9;?&gt;&lt;a href='&lt;?= SITE_DIR ?&gt;'&gt;&lt;?&#10;}&#10;?&gt;&#10;&lt;?$APPLICATION-&gt;IncludeComponent(&#10;&#9;&quot;bitrix:main.include&quot;,&#10;&#9;&quot;,&#10;&#9;array(&#10;&#9;&#9;&quot;AREA_FILE_SHOW&quot; =&gt; &quot;file&quot;,&#10;&#9;&#9;&quot;PATH&quot; =&gt; SITE_DIR . &quot;includes/logo.php&quot;&#10;&#9;),&#10;&#9;false&#10;);?&gt;&#10;&lt;?&#10;if (!$is['front']) {&#10;&#9;?&gt;&lt;/a&gt;&lt;?&#10;}&#10;?&gt;" toReformat="true" toShortenFQNames="true">
     <context>
-      <option name="PHP" value="true" />
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="PHP" value="false" />
     </context>
   </template>
-  <template name="bitrix main.include" value="&lt;?$APPLICATION-&gt;IncludeComponent(&#10;&#9;'bitrix:main.include',&#10;&#9;'',&#10;&#9;array(&#10;&#9;&#9;'AREA_FILE_SHOW' =&gt; 'file',&#10;&#9;&#9;'PATH' =&gt; SITE_DIR . 'includes/logo.php$END$'&#10;&#9;),&#10;&#9;false&#10;);?&gt;" toReformat="false" toShortenFQNames="true">
+  <template name="bitrix main.include" value="&lt;? $APPLICATION-&gt;IncludeComponent(&#10;&#9;'bitrix:main.include',&#10;&#9;'',&#10;&#9;array(&#10;&#9;&#9;'AREA_FILE_SHOW' =&gt; 'file',&#10;&#9;&#9;'PATH' =&gt; SITE_DIR . 'includes/logo.php$END$'&#10;&#9;),&#10;&#9;false&#10;); ?&gt;" toReformat="false" toShortenFQNames="true">
     <context>
-      <option name="PHP" value="true" />
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="PHP" value="false" />
     </context>
   </template>
-  <template name="bitrix main.include inc" value="&lt;?$APPLICATION-&gt;IncludeComponent(&#10;&#9;&quot;bitrix:main.include&quot;,&#10;&#9;&quot;&quot;,&#10;&#9;Array(&#10;&#9;&#9;&quot;AREA_FILE_SHOW&quot; =&gt; &quot;page&quot;,&#10;&#9;&#9;&quot;AREA_FILE_SUFFIX&quot; =&gt; &quot;inc&quot;,&#10;&#9;&#9;&quot;COMPONENT_TEMPLATE&quot; =&gt; &quot;.default&quot;,&#10;&#9;&#9;&quot;EDIT_TEMPLATE&quot; =&gt; &quot;&quot;&#10;&#9;)&#10;);?&gt;" toReformat="false" toShortenFQNames="true">
+  <template name="bitrix main.include inc" value="&lt;? $APPLICATION-&gt;IncludeComponent(&#10;&#9;'bitrix:main.include',&#10;&#9;'',&#10;&#9;Array(&#10;&#9;&#9;'AREA_FILE_SHOW'     =&gt; 'page',&#10;&#9;&#9;'AREA_FILE_SUFFIX'   =&gt; 'inc',&#10;&#9;&#9;'COMPONENT_TEMPLATE' =&gt; '.default',&#10;&#9;&#9;'EDIT_TEMPLATE'      =&gt; ''&#10;&#9;)&#10;); ?&gt;" toReformat="false" toShortenFQNames="true">
     <context>
-      <option name="PHP" value="true" />
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="PHP" value="false" />
     </context>
   </template>
   <template name="bitrix menu" value="&lt;?$APPLICATION-&gt;IncludeComponent(&quot;bitrix:menu&quot;, &quot;header&quot;, Array(&#10;&#9;&#9;&quot;ROOT_MENU_TYPE&quot; =&gt; &quot;header&quot;,&#9;// Тип меню для первого уровня&#10;&#9;&#9;&quot;MENU_CACHE_TYPE&quot; =&gt; &quot;A&quot;,&#9;// Тип кеширования&#10;&#9;&#9;&quot;MENU_CACHE_TIME&quot; =&gt; &quot;3600&quot;,&#9;// Время кеширования (сек.)&#10;&#9;&#9;&quot;MENU_CACHE_USE_GROUPS&quot; =&gt; &quot;Y&quot;,&#9;// Учитывать права доступа&#10;&#9;&#9;&quot;MENU_CACHE_GET_VARS&quot; =&gt; &quot;&quot;,&#9;// Значимые переменные запроса&#10;&#9;&#9;&quot;MAX_LEVEL&quot; =&gt; &quot;1&quot;,&#9;// Уровень вложенности меню&#10;&#9;&#9;&quot;CHILD_MENU_TYPE&quot; =&gt; &quot;header&quot;,&#9;// Тип меню для остальных уровней&#10;&#9;&#9;&quot;USE_EXT&quot; =&gt; &quot;Y&quot;,&#9;// Подключать файлы с именами вида .тип_меню.menu_ext.php&#10;&#9;&#9;&quot;DELAY&quot; =&gt; &quot;N&quot;,&#9;// Откладывать выполнение шаблона меню&#10;&#9;&#9;&quot;ALLOW_MULTI_SELECT&quot; =&gt; &quot;N&quot;,&#9;// Разрешить несколько активных пунктов одновременно&#10;&#9;),&#10;&#9;false&#10;);?&gt;" toReformat="false" toShortenFQNames="true">
     <context>
-      <option name="PHP" value="true" />
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
+      <option name="CoffeeScript" value="false" />
+      <option name="PHP" value="false" />
     </context>
   </template>
   <template name="bitrix prolog included" value="if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();" toReformat="false" toShortenFQNames="true">
