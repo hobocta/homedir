@@ -3,9 +3,9 @@
     <ignoreFiles list="*.hprof;*.pyc;*.pyo;*.rbc;*~;.DS_Store;.bundle;.git;.hg;.svn;.tox;CVS;RCS;SCCS;__pycache__;_svn;rcs;vssver.scc;vssver2.scc;" />
     <extensionMap>
       <mapping ext="info" type="Ini" />
-      <mapping ext="install" type="PHP" />
-      <mapping ext="test" type="PHP" />
       <mapping ext="theme" type="PHP" />
+      <mapping ext="test" type="PHP" />
+      <mapping ext="install" type="PHP" />
       <mapping ext="profile" type="PHP" />
       <mapping pattern="1" type="PLAIN_TEXT" />
     </extensionMap>
