@@ -108,12 +108,12 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="bitrix image resize" value="if (empty($arResult['ITEMS'])) {&#10;&#9;return;&#10;}&#10;&#10;$CFile = new CFile;&#10;foreach ($arResult['ITEMS'] as $key =&gt; $arItem) {&#10;&#9;if (!empty($arItem['PREVIEW_PICTURE']) &amp;&amp; is_array($arItem['PREVIEW_PICTURE'])) {&#10;&#9;&#9;$arResult['ITEMS'][$key]['previewPicture'] = $CFile-&gt;ResizeImageGet(&#10;&#9;&#9;&#9;$arItem['PREVIEW_PICTURE'],&#10;&#9;&#9;&#9;array(&#10;&#9;&#9;&#9;&#9;'width'  =&gt; 370,&#10;&#9;&#9;&#9;&#9;'height' =&gt; 242,&#10;&#9;&#9;&#9;),&#10;&#9;&#9;&#9;BX_RESIZE_IMAGE_EXACT,&#10;&#9;&#9;&#9;true&#10;&#9;&#9;);&#10;&#9;}&#10;&#9;if (!empty($arItem['PROPERTIES']['LOGO']['VALUE']) &amp;&amp; is_numeric($arItem['PROPERTIES']['LOGO']['VALUE'])) {&#10;&#9;&#9;$arResult['ITEMS'][$key]['logo'] = $CFile-&gt;ResizeImageGet(&#10;&#9;&#9;&#9;$arItem['PROPERTIES']['LOGO']['VALUE'],&#10;&#9;&#9;&#9;array(&#10;&#9;&#9;&#9;&#9;'width'  =&gt; 370,&#10;&#9;&#9;&#9;&#9;'height' =&gt; 242,&#10;&#9;&#9;&#9;),&#10;&#9;&#9;&#9;BX_RESIZE_IMAGE_EXACT,&#10;&#9;&#9;&#9;true&#10;&#9;&#9;);&#10;&#9;}&#10;}&#10;" toReformat="true" toShortenFQNames="true">
+  <template name="bitrix image resize" value="if (empty($arResult['ITEMS'])) {&#10;&#9;return;&#10;}&#10;&#10;foreach ($arResult['ITEMS'] as $key =&gt; $arItem) {&#10;&#9;if (!empty($arItem['PREVIEW_PICTURE']) &amp;&amp; is_array($arItem['PREVIEW_PICTURE'])) {&#10;&#9;&#9;$arResult['ITEMS'][$key]['previewPicture'] = CFile::ResizeImageGet(&#10;&#9;&#9;&#9;$arItem['PREVIEW_PICTURE'],&#10;&#9;&#9;&#9;array(&#10;&#9;&#9;&#9;&#9;'width'  =&gt; 370,&#10;&#9;&#9;&#9;&#9;'height' =&gt; 242,&#10;&#9;&#9;&#9;),&#10;&#9;&#9;&#9;BX_RESIZE_IMAGE_EXACT,&#10;&#9;&#9;&#9;true&#10;&#9;&#9;);&#10;&#9;}&#10;&#9;if (!empty($arItem['PROPERTIES']['LOGO']['VALUE']) &amp;&amp; is_numeric($arItem['PROPERTIES']['LOGO']['VALUE'])) {&#10;&#9;&#9;$arResult['ITEMS'][$key]['logo'] = CFile::ResizeImageGet(&#10;&#9;&#9;&#9;$arItem['PROPERTIES']['LOGO']['VALUE'],&#10;&#9;&#9;&#9;array(&#10;&#9;&#9;&#9;&#9;'width'  =&gt; 370,&#10;&#9;&#9;&#9;&#9;'height' =&gt; 242,&#10;&#9;&#9;&#9;),&#10;&#9;&#9;&#9;BX_RESIZE_IMAGE_EXACT,&#10;&#9;&#9;&#9;true&#10;&#9;&#9;);&#10;&#9;}&#10;}&#10;" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="bitrix includefile" value="&lt;?$APPLICATION-&gt;IncludeFile(&#10;&#9;SITE_DIR . &quot;includes/logo.php$END$&quot;,&#10;&#9;array(),&#10;&#9;array(&#10;&#9;&#9;&quot;MODE&quot; =&gt; &quot;html&quot;,&#10;&#9;&#9;&quot;NAME&quot; =&gt; &quot;логотип&quot;&#10;&#9;)&#10;);?&gt;" toReformat="true" toShortenFQNames="true">
+  <template name="bitrix includefile" value="&lt;?$APPLICATION-&gt;IncludeFile(&#10;&#9;SITE_DIR . &quot;includes/logo.php$END$&quot;,&#10;&#9;array(),&#10;&#9;array(&#10;&#9;&#9;&quot;MODE&quot; =&gt; &quot;html&quot;,&#10;&#9;&#9;&quot;NAME&quot; =&gt; &quot;логотип&quot;&#10;&#9;)&#10;)?&gt;" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="HTML_TEXT" value="true" />
       <option name="HTML" value="true" />
@@ -137,14 +137,14 @@
       <option name="PHP" value="false" />
     </context>
   </template>
-  <template name="bitrix main.include" value="&lt;? $APPLICATION-&gt;IncludeComponent(&#10;&#9;'bitrix:main.include',&#10;&#9;'',&#10;&#9;array(&#10;&#9;&#9;'AREA_FILE_SHOW' =&gt; 'file',&#10;&#9;&#9;'PATH' =&gt; SITE_DIR . 'includes/logo.php$END$'&#10;&#9;),&#10;&#9;false&#10;); ?&gt;" toReformat="false" toShortenFQNames="true">
+  <template name="bitrix main.include" value="&lt;?$APPLICATION-&gt;IncludeComponent(&#10;&#9;'bitrix:main.include',&#10;&#9;'',&#10;&#9;array(&#10;&#9;&#9;'AREA_FILE_SHOW' =&gt; 'file',&#10;&#9;&#9;'PATH' =&gt; SITE_DIR . 'includes/logo.php$END$'&#10;&#9;),&#10;&#9;false&#10;)?&gt;" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML_TEXT" value="true" />
       <option name="HTML" value="true" />
       <option name="PHP" value="false" />
     </context>
   </template>
-  <template name="bitrix main.include inc" value="&lt;? $APPLICATION-&gt;IncludeComponent(&#10;&#9;'bitrix:main.include',&#10;&#9;'',&#10;&#9;Array(&#10;&#9;&#9;'AREA_FILE_SHOW'     =&gt; 'page',&#10;&#9;&#9;'AREA_FILE_SUFFIX'   =&gt; 'inc',&#10;&#9;&#9;'COMPONENT_TEMPLATE' =&gt; '.default',&#10;&#9;&#9;'EDIT_TEMPLATE'      =&gt; ''&#10;&#9;)&#10;); ?&gt;" toReformat="false" toShortenFQNames="true">
+  <template name="bitrix main.include inc" value="&lt;?$APPLICATION-&gt;IncludeComponent(&#10;&#9;'bitrix:main.include',&#10;&#9;'',&#10;&#9;Array(&#10;&#9;&#9;'AREA_FILE_SHOW'     =&gt; 'page',&#10;&#9;&#9;'AREA_FILE_SUFFIX'   =&gt; 'inc',&#10;&#9;&#9;'COMPONENT_TEMPLATE' =&gt; '.default',&#10;&#9;&#9;'EDIT_TEMPLATE'      =&gt; ''&#10;&#9;)&#10;)?&gt;" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML_TEXT" value="true" />
       <option name="HTML" value="true" />
