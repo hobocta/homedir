@@ -34,15 +34,19 @@ CHANGED=$(git status --porcelain)
 if [ -n "${CHANGED}" ]; then
 	git st
 else
-	cdsublimesnippets
-	CHANGED=$(git status --porcelain)
-	if [ -n "${CHANGED}" ]; then
-		git st
-	else
-		echo 'gitmultipull:'
-		gitmultipull
-		echo 'gitmultiprune:'
-		gitmultiprune
-		cd /f/projects
+	if [ $HOSTNAME = "PANDA" ]; then
+		cdsublimesnippets
+		CHANGED=$(git status --porcelain)
+		if [ -n "${CHANGED}" ]; then
+			git st
+		else
+			echo 'gitmultipull:'
+			gitmultipull
+			echo 'gitmultiprune:'
+			gitmultiprune
+			cd /f/projects
+		fi
+	elif [ $HOSTNAME = "DELL" ]; then
+		cd /d/Антон/repository/
 	fi
 fi
