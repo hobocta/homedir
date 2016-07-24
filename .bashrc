@@ -4,6 +4,7 @@ PS1="
 \[\033[01;37m\]> \[\033[00m\]"
 
 source ~/git-flow-completion.bash
+source ~/go-completion.bash
 
 alias tmp1="mkdir tmp && git log -1 --name-only --no-commit-id --pretty=\"format:\" | sort | uniq | xargs -I % cp --parents % tmp"
 alias tmp2="mkdir tmp && git log -2 --name-only --no-commit-id --pretty=\"format:\" | sort | uniq | xargs -I % cp --parents % tmp"
