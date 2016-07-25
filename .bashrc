@@ -26,11 +26,13 @@ else
 		if [ -n "${CHANGED}" ]; then
 			git st
 		else
+			cd /f/projects
+
 			echo 'gitmultipull:'
 			gitmultipull
+
 			echo 'gitmultiprune:'
 			gitmultiprune
-			cd /f/projects
 		fi
 	elif [ $HOSTNAME = "DELL" ]; then
 		cd /d/Антон/repository/
