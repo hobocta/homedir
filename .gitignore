@@ -53,6 +53,7 @@
 /.WebIde90/config/options/usageView.xml
 /.WebIde90/config/options/other.xml
 !/.WebIde90/config/plugins/
+/.WebIde90/config/plugins/availables.xml
 !/.WebIde90/config/templates/
 /.fontconfig/
 /.oracle_jre_usage/
