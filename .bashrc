@@ -24,9 +24,10 @@ alias tmp15="mkdir tmp && git log -15 --name-only --no-commit-id --pretty=\"form
 
 alias gitwary='git st | grep -v "\.php\|\.txt\|\.gif\|\.png\|\.css\|\.js\|\.jpg\|\.gitignore\|\.xml\|\.html\|\.ico\|\.config\|\.snp"'
 alias gitlogtoday='git log --pretty="%s" --since="0am"'
-alias gitnewbranch='c:/Users/Anton/bash/gitnewbranch.sh'
-alias gitmultipull='c:/Users/Anton/bash/gitmultipull.sh'
-alias gitmultiprune='c:/Users/Anton/bash/gitmultiprune.sh'
+
+alias gitnewbranch='~/bash/gitnewbranch.sh'
+alias gitmultipull='~/bash/gitmultipull.sh'
+alias gitmultiprune='~/bash/gitmultiprune.sh'
 
 cd ~
 CHANGED=$(git status --porcelain)
