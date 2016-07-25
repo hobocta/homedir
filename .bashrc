@@ -34,7 +34,7 @@ CHANGED=$(git status --porcelain)
 if [ -n "${CHANGED}" ]; then
 	git st
 else
-	if [ $HOSTNAME = "PANDA" ]; then
+	if [ $HOSTNAME = "Anton-PC" ]; then
 		cdsublimesnippets
 		CHANGED=$(git status --porcelain)
 		if [ -n "${CHANGED}" ]; then
