@@ -6,28 +6,13 @@ PS1="
 source ~/git-flow-completion.bash
 source ~/go-completion.bash
 
-alias tmp1="mkdir tmp && git log -1 --name-only --no-commit-id --pretty=\"format:\" | sort | uniq | xargs -I % cp --parents % tmp"
-alias tmp2="mkdir tmp && git log -2 --name-only --no-commit-id --pretty=\"format:\" | sort | uniq | xargs -I % cp --parents % tmp"
-alias tmp3="mkdir tmp && git log -3 --name-only --no-commit-id --pretty=\"format:\" | sort | uniq | xargs -I % cp --parents % tmp"
-alias tmp4="mkdir tmp && git log -4 --name-only --no-commit-id --pretty=\"format:\" | sort | uniq | xargs -I % cp --parents % tmp"
-alias tmp5="mkdir tmp && git log -5 --name-only --no-commit-id --pretty=\"format:\" | sort | uniq | xargs -I % cp --parents % tmp"
-alias tmp6="mkdir tmp && git log -6 --name-only --no-commit-id --pretty=\"format:\" | sort | uniq | xargs -I % cp --parents % tmp"
-alias tmp7="mkdir tmp && git log -7 --name-only --no-commit-id --pretty=\"format:\" | sort | uniq | xargs -I % cp --parents % tmp"
-alias tmp8="mkdir tmp && git log -8 --name-only --no-commit-id --pretty=\"format:\" | sort | uniq | xargs -I % cp --parents % tmp"
-alias tmp9="mkdir tmp && git log -9 --name-only --no-commit-id --pretty=\"format:\" | sort | uniq | xargs -I % cp --parents % tmp"
-alias tmp10="mkdir tmp && git log -10 --name-only --no-commit-id --pretty=\"format:\" | sort | uniq | xargs -I % cp --parents % tmp"
-alias tmp11="mkdir tmp && git log -11 --name-only --no-commit-id --pretty=\"format:\" | sort | uniq | xargs -I % cp --parents % tmp"
-alias tmp12="mkdir tmp && git log -12 --name-only --no-commit-id --pretty=\"format:\" | sort | uniq | xargs -I % cp --parents % tmp"
-alias tmp13="mkdir tmp && git log -13 --name-only --no-commit-id --pretty=\"format:\" | sort | uniq | xargs -I % cp --parents % tmp"
-alias tmp14="mkdir tmp && git log -14 --name-only --no-commit-id --pretty=\"format:\" | sort | uniq | xargs -I % cp --parents % tmp"
-alias tmp15="mkdir tmp && git log -15 --name-only --no-commit-id --pretty=\"format:\" | sort | uniq | xargs -I % cp --parents % tmp"
-
 alias gitwary='git st | grep -v "\.php\|\.txt\|\.gif\|\.png\|\.css\|\.js\|\.jpg\|\.gitignore\|\.xml\|\.html\|\.ico\|\.config\|\.snp"'
 alias gitlogtoday='git log --pretty="%s" --since="0am"'
 
 alias gitnewbranch='~/bash/gitnewbranch.sh'
 alias gitmultipull='~/bash/gitmultipull.sh'
 alias gitmultiprune='~/bash/gitmultiprune.sh'
+alias gittmp='~/bash/gittmp.sh'
 
 cd ~
 CHANGED=$(git status --porcelain)
