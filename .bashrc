@@ -19,7 +19,7 @@ CHANGED=$(git status --porcelain)
 if [ -n "${CHANGED}" ]; then
 	git st
 else
-	if [ $HOSTNAME = "Anton-PC" ]; then
+	if [ $HOSTNAME = "Panda" ]; then
 		alias cdsublimesnippets='cd "d:/Dropbox/Программы/#Portable/Sublime Text Build 3065 x64/Data/Packages/User/Snippets/sublime-snippets"'
 
 		cdsublimesnippets
