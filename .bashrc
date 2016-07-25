@@ -24,7 +24,6 @@ alias tmp15="mkdir tmp && git log -15 --name-only --no-commit-id --pretty=\"form
 
 alias gitwary='git st | grep -v "\.php\|\.txt\|\.gif\|\.png\|\.css\|\.js\|\.jpg\|\.gitignore\|\.xml\|\.html\|\.ico\|\.config\|\.snp"'
 alias gitlogtoday='git log --pretty="%s" --since="0am"'
-alias cdsublimesnippets='cd "d:/Dropbox/Программы/#Portable/Sublime Text Build 3065 x64/Data/Packages/User/Snippets/sublime-snippets"'
 alias gitnewbranch='c:/Users/Anton/bash/gitnewbranch.sh'
 alias gitmultipull='c:/Users/Anton/bash/gitmultipull.sh'
 alias gitmultiprune='c:/Users/Anton/bash/gitmultiprune.sh'
@@ -35,6 +34,8 @@ if [ -n "${CHANGED}" ]; then
 	git st
 else
 	if [ $HOSTNAME = "Anton-PC" ]; then
+		alias cdsublimesnippets='cd "d:/Dropbox/Программы/#Portable/Sublime Text Build 3065 x64/Data/Packages/User/Snippets/sublime-snippets"'
+
 		cdsublimesnippets
 		CHANGED=$(git status --porcelain)
 		if [ -n "${CHANGED}" ]; then
