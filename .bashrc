@@ -13,6 +13,7 @@ alias gitnewbranch='~/bash/gitnewbranch.sh'
 alias gitmultipull='~/bash/gitmultipull.sh'
 alias gitmultiprune='~/bash/gitmultiprune.sh'
 alias gittmp='~/bash/gittmp.sh'
+alias cdsublimesnippets='cd "d:/Dropbox/Программы/#Portable/Sublime Text Build 3065 x64/Data/Packages/User/Snippets/sublime-snippets"'
 
 cd ~
 CHANGED=$(git status --porcelain)
@@ -20,8 +21,6 @@ if [ -n "${CHANGED}" ]; then
 	git st
 else
 	if [ $HOSTNAME = "Panda" ]; then
-		alias cdsublimesnippets='cd "d:/Dropbox/Программы/#Portable/Sublime Text Build 3065 x64/Data/Packages/User/Snippets/sublime-snippets"'
-
 		cdsublimesnippets
 		CHANGED=$(git status --porcelain)
 		if [ -n "${CHANGED}" ]; then
