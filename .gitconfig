@@ -32,4 +32,4 @@
 	packSizeLimit = 20m
 	threads = 1
 [push]
-	default = matching
+	default = simple
