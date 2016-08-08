@@ -120,7 +120,7 @@
       <option name="PHP" value="false" />
     </context>
   </template>
-  <template name="bitrix include module" value="if (!\Bitrix\Main\Loader::includeModule('iblock')) {&#10;&#9;ShowError('Module iblock is not loaded');&#10;&#9;return;&#10;}" toReformat="false" toShortenFQNames="true">
+  <template name="bitrix include module" value="use Bitrix\Main\Loader;&#10;Loader::includeModule('iblock');&#10;" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="PHP" value="true" />
     </context>
