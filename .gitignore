@@ -62,4 +62,10 @@
 /.oracle_jre_usage/
 /.PhpStorm2016.1/
 /_viminfo
-/.PyCharm2016.2/
+/.PyCharm2016.2/system/
+/.PyCharm2016.2/config/port*
+/.PyCharm2016.2/config/disabled_plugins.txt
+/.PyCharm2016.2/config/tasks/
+/.PyCharm2016.2/config/plugins/
+/.PyCharm2016.2/config/options/
+/.PyCharm2016.2/config/inspection/
