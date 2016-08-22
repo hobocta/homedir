@@ -53,6 +53,7 @@
     <keyboard-shortcut first-keystroke="control D" />
   </action>
   <action id="SendEOF" />
+  <action id="ShowProjectStructureSettings" />
   <action id="SwitchApply">
     <keyboard-shortcut first-keystroke="shift alt ENTER" />
   </action>
@@ -67,6 +68,9 @@
   </action>
   <action id="SwitchUp">
     <keyboard-shortcut first-keystroke="shift alt UP" />
+  </action>
+  <action id="TogglePowerSave">
+    <keyboard-shortcut first-keystroke="shift control alt S" />
   </action>
   <action id="Uml.ShowDiff" />
   <action id="UsageView.ShowRecentFindUsages" />
