@@ -45,9 +45,11 @@
   </action>
   <action id="NextTab">
     <keyboard-shortcut first-keystroke="control PAGE_DOWN" />
+    <keyboard-shortcut first-keystroke="control TAB" />
   </action>
   <action id="PreviousTab">
     <keyboard-shortcut first-keystroke="control PAGE_UP" />
+    <keyboard-shortcut first-keystroke="shift control TAB" />
   </action>
   <action id="RecentFiles" />
   <action id="ReopenClosedTab">
@@ -73,6 +75,7 @@
   <action id="SwitchUp">
     <keyboard-shortcut first-keystroke="shift alt UP" />
   </action>
+  <action id="Switcher" />
   <action id="TogglePowerSave">
     <keyboard-shortcut first-keystroke="shift control alt S" />
   </action>
