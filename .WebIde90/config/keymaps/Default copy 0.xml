@@ -3,11 +3,18 @@
   <action id="CloseContent">
     <keyboard-shortcut first-keystroke="control W" />
   </action>
+  <action id="CollapseSelection" />
+  <action id="CommentByLineComment">
+    <keyboard-shortcut first-keystroke="control SLASH" />
+    <keyboard-shortcut first-keystroke="control DIVIDE" />
+    <keyboard-shortcut first-keystroke="control PERIOD" />
+  </action>
   <action id="CompareTwoFiles" />
   <action id="Diff.SelectedChange" />
   <action id="Diff.ShowDiff" />
   <action id="Diff.ShowSettingsPopup" />
   <action id="DumpLookupElementWeights" />
+  <action id="EditorChooseLookupItemDot" />
   <action id="EditorDeleteLine">
     <keyboard-shortcut first-keystroke="shift control K" />
   </action>
