@@ -35,10 +35,10 @@ else
 		else
 			cd /f/projects
 
-			echo ${green}'gitmultipull:'${reset}
+			echo ${green}'gitmultipull'${reset}
 			gitmultipull
 
-			echo ${green}'gitmultiprune:'${reset}
+			echo ${green}'gitmultiprune'${reset}
 			gitmultiprune
 		fi
 	elif [ $HOSTNAME = "DELL" ]; then
