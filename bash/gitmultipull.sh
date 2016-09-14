@@ -1,3 +1,3 @@
 #!/bin/bash
 
-find -mindepth 2 -maxdepth 2 -type d -name '.git' -exec sh -c 'cd {} && cd .. && pwd && git pull -n' \;
+find -mindepth 2 -maxdepth 2 -type f -name '.hobocta.git.pull.on' -exec sh -c 'cd $(dirname "{}") && pwd && git pull -n' \;
