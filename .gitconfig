@@ -23,14 +23,5 @@
 	filemode = false
 	pager = less -S
 	quotepath = false
-
 [color]
 	ui = auto
-[receive]
-	denyCurrentBranch = ignore
-[pack]
-	windowMemory = 10m
-	packSizeLimit = 20m
-	threads = 1
-[push]
-	default = simple
