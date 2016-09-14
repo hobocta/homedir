@@ -1,6 +1,6 @@
 #!/bin/bash
 
-find -mindepth 2 -maxdepth 2 -type f -name '.hobocta.git.prune.on' -mmin +60 -exec sh -c '\
+find -mindepth 2 -maxdepth 2 -type f -name '.hobocta.git.prune.on' -mmin +720 -exec sh -c '\
 		cd $(dirname "{}") \
 		&& echo "${PWD##*/}" \
 		&& git remote prune origin \
