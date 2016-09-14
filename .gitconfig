@@ -25,3 +25,5 @@
 	quotepath = false
 [color]
 	ui = auto
+[push]
+	default = simple
