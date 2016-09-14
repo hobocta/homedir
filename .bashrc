@@ -18,6 +18,10 @@ alias cdsublimesnippets='cd "d:/Dropbox/Программы/#Portable/Sublime Tex
 alias gitaddanddiff='git add . && git diff --cached'
 alias gitsubmoduleforeachgitpull='git submodule foreach git pull'
 
+red=`tput setaf 1`
+green=`tput setaf 2`
+reset=`tput sgr0`
+
 cd ~
 CHANGED=$(git status --porcelain)
 if [ -n "${CHANGED}" ]; then
@@ -31,10 +35,10 @@ else
 		else
 			cd /f/projects
 
-			echo 'gitmultipull:'
+			echo ${green}'gitmultipull:'${reset}
 			gitmultipull
 
-			echo 'gitmultiprune:'
+			echo ${green}'gitmultiprune:'${reset}
 			gitmultiprune
 		fi
 	elif [ $HOSTNAME = "DELL" ]; then
