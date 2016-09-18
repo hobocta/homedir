@@ -41,7 +41,7 @@ else
 			echo ${green}'gitmultiprune'${reset}
 			gitmultiprune
 		fi
-	elif [ $HOSTNAME = "DELL" ]; then
+	elif [ $HOSTNAME = "Dell" ]; then
 		cd /d/Антон/repository/
 	fi
 fi
