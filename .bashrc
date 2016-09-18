@@ -42,6 +42,6 @@ else
 			gitmultiprune
 		fi
 	elif [ $HOSTNAME = "Dell" ]; then
-		cd /d/Антон/repository/
+		cd /d/Anton/repository/
 	fi
 fi
