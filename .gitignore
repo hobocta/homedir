@@ -55,6 +55,7 @@
 /.WebIde90/config/options/usageView.xml
 /.WebIde90/config/options/webServers.xml
 /.WebIde90/config/options/window.manager.xml
+/.WebIde90/config/options/security.xml
 !/.WebIde90/config/plugins/
 /.WebIde90/config/plugins/availables.xml
 !/.WebIde90/config/templates/
