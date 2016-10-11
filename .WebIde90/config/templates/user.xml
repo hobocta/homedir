@@ -144,7 +144,7 @@
       <option name="PHP" value="false" />
     </context>
   </template>
-  <template name="bitrix main.include inc" value="&lt;?$APPLICATION-&gt;IncludeComponent(&#10;&#9;'bitrix:main.include',&#10;&#9;'',&#10;&#9;Array(&#10;&#9;&#9;'AREA_FILE_SHOW'     =&gt; 'page',&#10;&#9;&#9;'AREA_FILE_SUFFIX'   =&gt; 'inc',&#10;&#9;&#9;'COMPONENT_TEMPLATE' =&gt; '.default',&#10;&#9;&#9;'EDIT_TEMPLATE'      =&gt; ''&#10;&#9;)&#10;)?&gt;" toReformat="false" toShortenFQNames="true">
+  <template name="bitrix main.include inc" value="&lt;?$APPLICATION-&gt;IncludeComponent(&#10;&#9;'bitrix:main.include',&#10;&#9;'',&#10;&#9;array(&#10;&#9;&#9;'AREA_FILE_SHOW'     =&gt; 'page',&#10;&#9;&#9;'AREA_FILE_SUFFIX'   =&gt; 'inc',&#10;&#9;&#9;'COMPONENT_TEMPLATE' =&gt; '.default',&#10;&#9;&#9;'EDIT_TEMPLATE'      =&gt; ''&#10;&#9;)&#10;)?&gt;" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML_TEXT" value="true" />
       <option name="HTML" value="true" />
