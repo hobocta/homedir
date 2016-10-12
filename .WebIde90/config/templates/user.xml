@@ -137,7 +137,7 @@
       <option name="PHP" value="false" />
     </context>
   </template>
-  <template name="bitrix main.include" value="&lt;?$APPLICATION-&gt;IncludeComponent(&#10;&#9;'bitrix:main.include',&#10;&#9;'',&#10;&#9;array(&#10;&#9;&#9;'AREA_FILE_SHOW' =&gt; 'file',&#10;&#9;&#9;'PATH' =&gt; SITE_DIR . 'includes/logo.php$END$'&#10;&#9;),&#10;&#9;false&#10;)?&gt;" toReformat="false" toShortenFQNames="true">
+  <template name="bitrix main.include" value="&lt;?$APPLICATION-&gt;IncludeComponent(&#10;&#9;'bitrix:main.include',&#10;&#9;'',&#10;&#9;array(&#10;&#9;&#9;'AREA_FILE_SHOW' =&gt; 'file',&#10;&#9;&#9;'PATH'           =&gt; sprintf('%slocal/includes/logo.php$END$', SITE_DIR),&#10;&#9;),&#10;&#9;false&#10;)?&gt;" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="HTML_TEXT" value="true" />
       <option name="HTML" value="true" />
