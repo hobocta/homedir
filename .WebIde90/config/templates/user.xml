@@ -96,11 +96,11 @@
       <option name="PHP" value="true" />
     </context>
   </template>
-  <template name="bitrix areas" value="&lt;?php&#10;$this-&gt;AddEditAction(&#10;&#9;$arItem['ID'],&#10;&#9;$arItem['EDIT_LINK'],&#10;&#9;CIBlock::GetArrayByID($arItem['IBLOCK_ID'], 'ELEMENT_EDIT')&#10;);&#10;$this-&gt;AddDeleteAction(&#10;&#9;$arItem['ID'],&#10;&#9;$arItem['DELETE_LINK'],&#10;&#9;CIBlock::GetArrayByID($arItem['IBLOCK_ID'], 'ELEMENT_DELETE'),&#10;&#9;array('CONFIRM' =&gt; GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM'))&#10;);&#10;?&gt;&#10;id='&lt;?php echo $this-&gt;GetEditAreaId($arItem['ID']); ?&gt;'" toReformat="true" toShortenFQNames="true">
+  <template name="bitrix areas element" value="&lt;?&#10;$this-&gt;AddEditAction(&#10;&#9;$arItem['ID'],&#10;&#9;$arItem['EDIT_LINK'],&#10;&#9;CIBlock::GetArrayByID($arItem['IBLOCK_ID'], 'ELEMENT_EDIT')&#10;);&#10;$this-&gt;AddDeleteAction(&#10;&#9;$arItem['ID'],&#10;&#9;$arItem['DELETE_LINK'],&#10;&#9;CIBlock::GetArrayByID($arItem['IBLOCK_ID'], 'ELEMENT_DELETE'),&#10;&#9;array('CONFIRM' =&gt; GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM'))&#10;);&#10;?&gt;&#10;id=&quot;&lt;?=$this-&gt;GetEditAreaId($arItem['ID'])?&gt;&quot;" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="HTML_TEXT" value="true" />
       <option name="HTML" value="true" />
-      <option name="PHP" value="false" />
+      <option name="PHP" value="true" />
     </context>
   </template>
   <template name="bitrix iblock element phototes in prop resize" value="/**&#10; * Ресайзим большие фото, присланные через форму 'Добавить свой пункт проката'&#10; *&#10; * @param mixed $arFields&#10; */&#10;function addPunktResizePhotoes(&amp;$arFields) {&#10;&#9;if (!defined('ADD_PUNKT_IBLOCK_ID')) {&#10;&#9;&#9;throw new Exception('ADD_PUNKT_IBLOCK_ID is not defined');&#10;&#9;}&#10;&#9;if (!defined('ADD_PUNKT_PHOTO_PROP_ID')) {&#10;&#9;&#9;throw new Exception('ADD_PUNKT_PHOTO_PROP_ID is not defined');&#10;&#9;}&#10;&#9;if ($arFields['IBLOCK_ID'] == ADD_PUNKT_IBLOCK_ID) {&#10;&#9;&#9;if (&#10;&#9;&#9;&#9;!empty($arFields['PROPERTY_VALUES'][ADD_PUNKT_PHOTO_PROP_ID])&#10;&#9;&#9;&#9;&amp;&amp; is_array($arFields['PROPERTY_VALUES'][ADD_PUNKT_PHOTO_PROP_ID])&#10;&#9;&#9;) {&#10;&#9;&#9;&#9;foreach ($arFields['PROPERTY_VALUES'][ADD_PUNKT_PHOTO_PROP_ID] as &amp;$photo) {&#10;&#9;&#9;&#9;&#9;if (!empty($photo['size'])) {&#10;&#9;&#9;&#9;&#9;&#9;CAllFile::ResizeImage(&#10;&#9;&#9;&#9;&#9;&#9;&#9;$photo,&#10;&#9;&#9;&#9;&#9;&#9;&#9;array(&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;'width' =&gt; 1200,&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;'height' =&gt; 1200&#10;&#9;&#9;&#9;&#9;&#9;&#9;),&#10;&#9;&#9;&#9;&#9;&#9;&#9;BX_RESIZE_IMAGE_PROPORTIONAL&#10;&#9;&#9;&#9;&#9;&#9;);&#10;&#9;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;}&#10;&#9;&#9;}&#10;&#9;}&#10;}" toReformat="true" toShortenFQNames="true">
@@ -436,6 +436,13 @@
   </template>
   <template name="error_reporting for cron scripts" value="error_reporting(E_ALL &amp; ~E_NOTICE &amp; ~E_STRICT &amp; ~E_DEPRECATED);" toReformat="false" toShortenFQNames="true">
     <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="bitrix areas section" value="&lt;?&#10;$this-&gt;AddEditAction(&#10;&#9;$arSection['ID'],&#10;&#9;$arSection['EDIT_LINK'],&#10;&#9;CIBlock::GetArrayByID($arSection['IBLOCK_ID'], 'SECTION_EDIT')&#10;);&#10;$this-&gt;AddDeleteAction(&#10;&#9;$arSection['ID'],&#10;&#9;$arSection['DELETE_LINK'],&#10;&#9;CIBlock::GetArrayByID($arSection['IBLOCK_ID'], 'SECTION_DELETE'),&#10;&#9;array('CONFIRM' =&gt; GetMessage('CT_BNL_SECTION_DELETE_CONFIRM'))&#10;);&#10;?&gt;&#10;id=&quot;&lt;?= $this-&gt;GetEditAreaId($arSection['ID']) ?&gt;&quot;&#10;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+      <option name="HTML" value="true" />
       <option name="PHP" value="true" />
     </context>
   </template>
