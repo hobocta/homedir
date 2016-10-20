@@ -8,6 +8,7 @@
       <mapping ext="install" type="PHP" />
       <mapping ext="profile" type="PHP" />
       <mapping pattern="1" type="PLAIN_TEXT" />
+      <mapping ext="md" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
 </application>
