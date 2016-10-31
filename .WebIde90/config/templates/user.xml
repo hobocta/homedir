@@ -405,7 +405,7 @@
       <option name="OTHER" value="false" />
     </context>
   </template>
-  <template name="catch sptintf" value="AddMessage2Log(sprintf('%s (%s:%s)', $e-&gt;getMessage(), $e-&gt;getFile(), $e-&gt;getLine()));" toReformat="true" toShortenFQNames="true">
+  <template name="bitrix catch sptintf" value="sprintf('Exception message: %s (%s:%s)', $e-&gt;getMessage(), $e-&gt;getFile(), $e-&gt;getLine())" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="HTML_TEXT" value="false" />
       <option name="HTML" value="false" />
