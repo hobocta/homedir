@@ -92,5 +92,8 @@
   <action id="Vcs.ShowMessageHistory">
     <keyboard-shortcut first-keystroke="control M" />
   </action>
+  <action id="linessorter.sort">
+    <keyboard-shortcut first-keystroke="shift control alt O" />
+  </action>
   <action id="openAssertEqualsDiff" />
 </keymap>
