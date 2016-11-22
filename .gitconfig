@@ -10,9 +10,7 @@
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	type = cat-file -t
 	dump = cat-file -p
-	mddiff = log --oneline --left-right master...dev
-	mddiff2 = log --oneline --left-right master...develop
-	dd = log --oneline --left-right dev...HEAD
+	lr = log --oneline --left-right
 [core]
 	; for linux:
 	;autocrlf = input
