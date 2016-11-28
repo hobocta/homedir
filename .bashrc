@@ -19,6 +19,7 @@ alias cdsublimesnippets='cd "d:/Dropbox/Программы/#Portable/Sublime Tex
 alias gitpush='git push'
 alias githist='git hist'
 alias gitdiffcached='git diff --cached'
+alias gitcim='git ci -m'
 alias gitaddanddiff='git add . && gitdiffcached'
 alias gitsubmoduleforeachgitpull='git submodule foreach git pull'
 
