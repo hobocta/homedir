@@ -16,7 +16,8 @@ alias gitmultipull='~/bash/gitmultipull.sh'
 alias gitmultiprune='~/bash/gitmultiprune.sh'
 alias gittmp='~/bash/gittmp.sh'
 alias cdsublimesnippets='cd "d:/Dropbox/Программы/#Portable/Sublime Text Build 3065 x64/Data/Packages/User/Snippets/sublime-snippets"'
-alias gitaddanddiff='git add . && git diff --cached'
+alias gitdiffcached='git diff --cached'
+alias gitaddanddiff='git add . && gitdiffcached'
 alias gitsubmoduleforeachgitpull='git submodule foreach git pull'
 
 red=`tput setaf 1`
