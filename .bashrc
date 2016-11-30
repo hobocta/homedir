@@ -22,6 +22,7 @@ alias gitdiffcached='git diff --cached'
 alias gitcim='git ci -m'
 alias gitaddanddiff='git add . && gitdiffcached'
 alias gitsubmoduleforeachgitpull='git submodule foreach git pull'
+alias pu='phpunit.phar'
 
 red=`tput setaf 1`
 green=`tput setaf 2`
