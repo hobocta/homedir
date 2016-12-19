@@ -26,6 +26,7 @@ alias pu='phpunit.phar'
 
 red=`tput setaf 1`
 green=`tput setaf 2`
+yellow=`tput setaf 3`
 reset=`tput sgr0`
 
 cd ~
@@ -41,10 +42,10 @@ else
 		else
 			cd /f/projects
 
-			echo ${green}'gitmultipull'${reset}
+			echo ${yellow}'gitmultipull'${reset}
 			gitmultipull
 
-			echo ${green}'gitmultiprune'${reset}
+			echo ${yellow}'gitmultiprune'${reset}
 			gitmultiprune
 		fi
 	elif [ $HOSTNAME = "Dell" ]; then
