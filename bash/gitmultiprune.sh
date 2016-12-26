@@ -2,7 +2,7 @@
 
 find -mindepth 2 -maxdepth 2 -type f -name '.hobocta.git.prune.on' -mmin +720 -exec sh -c '\
 		cd $(dirname "{}") \
-		&& echo -n "$(tput setaf 4)" \
+		&& echo -n "$(tput setaf 2)" \
 		&& echo "${PWD##*/}" \
 		&& echo -n "$(tput sgr0)" \
 		&& git remote prune origin \
