@@ -32,7 +32,7 @@ do
 
 		fileName=$dbName'.'$tableName'.sql'
 
-		mysqldump -u root --skip-comments --opt $dbName $tableName | gzip > $fileName'.gz'
+		mysqldump -u root --skip-comments --opt $dbName $tableName | gzip --no-name > $fileName'.gz'
 		echo 'done'
 	done
 done
