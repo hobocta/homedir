@@ -64,17 +64,12 @@ do
 
 	printf '[%02d/%02d] %-50s...' "$filesCounter" "$filesCount" "$file"
 
-	gzip -d -k -f $file
-	echo -n 'gzip ...'
-
 	IFS='.' read directory dbName tableName ext gz <<< "$file"
 	IFS='/' read directory dbName <<< "$dbName"
 
 	printf -v fileName '%s.%s.%s' "$dbName" "$tableName" "$ext"
 	
-	mysql -u root $dbName < $fileName
-	echo -n 'dump ...'
+	gzip -d -c $file | mysql -u root $dbName
 
-	rm $fileName
-	echo 'rm'
+	echo 'done'
 done
