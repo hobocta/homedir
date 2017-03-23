@@ -62,7 +62,7 @@ for file in "${files[@]}"
 do
 	let filesCounter=filesCounter+1
 
-	printf '[%02d/%02d] %-50s...' "$filesCounter" "$filesCount" "$file"
+	printf '[%03d/%03d] %-50s...' "$filesCounter" "$filesCount" "$file"
 
 	IFS='.' read directory dbName tableName ext gz <<< "$file"
 	IFS='/' read directory dbName <<< "$dbName"
