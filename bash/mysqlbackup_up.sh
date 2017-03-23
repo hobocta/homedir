@@ -2,6 +2,8 @@
 
 cd e:\mysql-backup\
 
+mkdir -p fetched
+
 files=()
 
 for file in `find . -name '*.sql.gz'`; do
@@ -70,6 +72,8 @@ do
 	printf -v fileName '%s.%s.%s' "$dbName" "$tableName" "$ext"
 	
 	gzip -d -c $file | mysql -u root $dbName
+
+	mv $file ./fetched/
 
 	echo 'done'
 done
