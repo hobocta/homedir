@@ -2,9 +2,11 @@
 
 cd e:\mysql-backup\
 
+mkdir -p processed
+
 files=()
 
-for file in `find . -name '*.sql.gz'`; do
+for file in `find ./ -maxdepth 1 -name '*.sql.gz'`; do
 	files+=($file)
 done
 
@@ -50,7 +52,7 @@ do
 
 	createDbComand='CREATE DATABASE IF NOT EXISTS '$dbName';'
 
-	printf '[%02d/%02d] %-50s...' "$dbNamesCounter" "$dbNamesCount" "$createDbComand"
+	printf '[%02d/%02d] %-60s...' "$dbNamesCounter" "$dbNamesCount" "$createDbComand"
 	echo $createDbComand | mysql -u root
 	echo 'done'
 done
@@ -62,7 +64,7 @@ for file in "${files[@]}"
 do
 	let filesCounter=filesCounter+1
 
-	printf '[%03d/%03d] %-50s...' "$filesCounter" "$filesCount" "$file"
+	printf '[%04d/%04d] %-56s...' "$filesCounter" "$filesCount" "$file"
 
 	IFS='.' read directory dbName tableName ext gz <<< "$file"
 	IFS='/' read directory dbName <<< "$dbName"
@@ -70,6 +72,8 @@ do
 	printf -v fileName '%s.%s.%s' "$dbName" "$tableName" "$ext"
 	
 	gzip -d -c $file | mysql -u root $dbName
+
+	mv $file ./processed/
 
 	echo 'done'
 done
