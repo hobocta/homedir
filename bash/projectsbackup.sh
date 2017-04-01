@@ -2,15 +2,28 @@
 
 cd /i/projects-backup
 
-date >> domains.bat
-
+domainsLinksFile=domainsLinks.bat
+date >> $domainsLinksFile
 for link in `find -L /f/OpenServer/domains -mindepth 1 -maxdepth 1 -xtype l`; do
 	linkLs="$(ls -lR $link)"
 	IFS='/' read one two <<< "$linkLs"
 	IFS=' ' read from separator to <<< "$two"
 	IFS='/' read fromDisk fromOpenServer fromDomains from <<< "$from"
 	IFS='/' read empty toDisk toPath <<< "$to"
-	echo 'mklink /D '$from' "'$toDisk':\'${toPath//\//\\}'"' >> domains.bat
+	echo 'mklink /D '$from' "'$toDisk':\'${toPath//\//\\}'"' >> $domainsLinksFile
+done
+
+projectsLinksFile=projectsLinks.bat
+date >> $projectsLinksFile
+for link in `find -L /f/projects -mindepth 1 -maxdepth 3 -xtype l`; do
+	echo $link
+	exit
+	linkLs="$(ls -lR $link)"
+	IFS='/' read one two <<< "$linkLs"
+	IFS=' ' read from separator to <<< "$two"
+	IFS='/' read fromDisk fromPath <<< "$from"
+	IFS='/' read empty toDisk toPath <<< "$to"
+	echo 'mklink /D '$fromDisk':\'${fromPath//\//\\}' "'$toDisk':\'${toPath//\//\\}'"' >> $projectsLinksFile
 done
 
 directories=()
