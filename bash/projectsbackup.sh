@@ -16,8 +16,6 @@ done
 projectsLinksFile=projectsLinks.bat
 date >> $projectsLinksFile
 for link in `find -L /f/projects -mindepth 1 -maxdepth 3 -xtype l`; do
-	echo $link
-	exit
 	linkLs="$(ls -lR $link)"
 	IFS='/' read one two <<< "$linkLs"
 	IFS=' ' read from separator to <<< "$two"
