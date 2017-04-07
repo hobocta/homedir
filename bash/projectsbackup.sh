@@ -10,7 +10,7 @@ for link in `find -L /f/OpenServer/domains -mindepth 1 -maxdepth 1 -xtype l`; do
 	IFS=' ' read from separator to <<< "$two"
 	IFS='/' read fromDisk fromOpenServer fromDomains from <<< "$from"
 	IFS='/' read empty toDisk toPath <<< "$to"
-	echo 'del /F /Q /S '$from >> $domainsLinksFile
+	echo 'rmdir /Q /S '$from >> $domainsLinksFile
 	echo 'mklink /D '$from' "'$toDisk':\'${toPath//\//\\}'"' >> $domainsLinksFile
 done
 
@@ -22,7 +22,7 @@ for link in `find -L /f/projects -mindepth 1 -maxdepth 3 -xtype l`; do
 	IFS=' ' read from separator to <<< "$two"
 	IFS='/' read fromDisk fromPath <<< "$from"
 	IFS='/' read empty toDisk toPath <<< "$to"
-	echo 'del /F /Q /S '$fromDisk':\'${fromPath//\//\\} >> $domainsLinksFile
+	echo 'rmdir /Q /S '$fromDisk':\'${fromPath//\//\\} >> $domainsLinksFile
 	echo 'mklink /D '$fromDisk':\'${fromPath//\//\\}' "'$toDisk':\'${toPath//\//\\}'"' >> $projectsLinksFile
 done
 
