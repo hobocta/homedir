@@ -25,7 +25,7 @@ alias githist='git hist'
 alias gitdiffcached='git diff --cached'
 alias gitcim='git ci -m'
 alias gitaddanddiff='git add . && gitdiffcached'
-alias gitsubmoduleforeachgitpull='git submodule foreach git pull'
+alias gits='git st'
 alias composer='composer.phar'
 alias pu='phpunit.phar'
 
