@@ -10,8 +10,8 @@ for link in `find -L /f/OpenServer/domains -mindepth 1 -maxdepth 1 -xtype l`; do
 	IFS=' ' read from separator to <<< "$two"
 	IFS='/' read fromDisk fromOpenServer fromDomains from <<< "$from"
 	IFS='/' read empty toDisk toPath <<< "$to"
-	echo 'rmdir /Q /S '$from >> $domainsLinksFile
-	echo 'mklink /D '$from' "'$toDisk':\'${toPath//\//\\}'"' >> $domainsLinksFile
+	echo 'rmdir /Q /S '$fromDisk':\'$fromOpenServer'\'$fromDomains'\'$from >> $domainsLinksFile
+	echo 'mklink /D '$fromDisk':\'$fromOpenServer'\'$fromDomains'\'$from' "'$toDisk':\'${toPath//\//\\}'"' >> $domainsLinksFile
 done
 
 projectsLinksFile=projectsLinks.bat
@@ -22,7 +22,7 @@ for link in `find -L /f/projects -mindepth 1 -maxdepth 3 -xtype l`; do
 	IFS=' ' read from separator to <<< "$two"
 	IFS='/' read fromDisk fromPath <<< "$from"
 	IFS='/' read empty toDisk toPath <<< "$to"
-	echo 'rmdir /Q /S '$fromDisk':\'${fromPath//\//\\} >> $domainsLinksFile
+	echo 'rmdir /Q /S '$fromDisk':\'${fromPath//\//\\} >> $projectsLinksFile
 	echo 'mklink /D '$fromDisk':\'${fromPath//\//\\}' "'$toDisk':\'${toPath//\//\\}'"' >> $projectsLinksFile
 done
 
