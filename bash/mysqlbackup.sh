@@ -36,3 +36,9 @@ do
 		echo 'done'
 	done
 done
+
+while true
+do
+	echo -ne '\007'
+	sleep 1
+done
