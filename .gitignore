@@ -41,3 +41,7 @@
 /.PyCharm*
 /.PhpStorm*
 /.pdepend/
+/.soapui/
+/default-soapui-workspace.xml
+/soapui-settings.xml
+/tempLoadUI/
