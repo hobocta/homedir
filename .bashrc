@@ -29,7 +29,7 @@ alias gitaddanddiff='git add . && gitdiffcached'
 alias gits='git st'
 alias composer='composer.phar'
 alias pu='phpunit.phar'
-alias php7='/f/OpenServer/modules/php/PHP-7/php.exe'
+alias php7='/f/OpenServer/modules/php/PHP-7-x64/php.exe'
 
 # "stdout is not a tty" fix
 unalias $(alias | grep winpty | cut -d"=" -f1 | cut -d" " -f2)
