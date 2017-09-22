@@ -46,3 +46,5 @@
 /soapui-settings.xml
 /tempLoadUI/
 /.atom/
+/.dbshell
+/.mongorc.js
