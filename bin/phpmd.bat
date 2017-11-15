@@ -42,5 +42,4 @@ GOTO RUN
 :USE_PEAR_PATH
 set PHPBIN=%PHP_PEAR_PHP_BIN%
 :RUN
-REM "%PHPBIN%" "c:\Users\Anton\phpmd\src\bin\phpmd" %*
 "%PHPBIN%" "c:\Users\Anton\bin\phpmd.phar" %*
