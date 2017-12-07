@@ -29,6 +29,7 @@ alias gitaddanddiff='git add . && gitdiffcached'
 alias gits='git st'
 alias composer='composer.phar'
 alias pu='phpunit.phar'
+alias php53='/f/OpenServer/modules/php/PHP-5.3/php.exe'
 alias php7='/f/OpenServer/modules/php/PHP-7-x64/php.exe'
 
 # "stdout is not a tty" fix
