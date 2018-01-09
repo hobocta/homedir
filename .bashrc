@@ -32,9 +32,6 @@ alias pu='phpunit.phar'
 alias php53='/f/OpenServer/modules/php/PHP-5.3/php.exe'
 alias php7='/f/OpenServer/modules/php/PHP-7-x64/php.exe'
 
-# "stdout is not a tty" fix
-unalias $(alias | grep winpty | cut -d"=" -f1 | cut -d" " -f2)
-
 red=`tput setaf 1`
 green=`tput setaf 2`
 yellow=`tput setaf 3`
