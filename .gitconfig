@@ -27,3 +27,5 @@
 	default = simple
 [credential]
 	helper = !'C:\\Users\\Anton\\AppData\\Roaming\\GitCredStore\\git-credential-winstore.exe'
+[winUpdater]
+	recentlySeenVersion = 2.15.1.windows.2
