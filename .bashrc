@@ -20,7 +20,6 @@ alias mysqlbackup='~/bash/mysqlbackup.sh'
 alias mysqlbackup_up='~/bash/mysqlbackup_up.sh'
 alias projectsbackup='~/bash/projectsbackup.sh'
 alias projectsbackup_up='~/bash/projectsbackup_up.sh'
-alias cdsublimesnippets='cd "d:/Dropbox/Программы/#Portable/Sublime Text Build 3065 x64/Data/Packages/User/Snippets/sublime-snippets"'
 alias gitpush='git push'
 alias githist='git hist'
 alias gitdiffcached='git diff --cached'
@@ -43,19 +42,13 @@ if [ -n "${CHANGED}" ]; then
 	git st
 else
 	if [ $HOSTNAME = "Panda" ] || [ $HOSTNAME = "Aspire" ]; then
-		cdsublimesnippets
-		CHANGED=$(git status --porcelain)
-		if [ -n "${CHANGED}" ]; then
-			git st
-		else
-			cd /f/projects
+		cd /f/projects
 
-			echo ${yellow}'gitmultipull'${reset}
-			gitmultipull
+		echo ${yellow}'gitmultipull'${reset}
+		gitmultipull
 
-			echo ${yellow}'gitmultiprune'${reset}
-			gitmultiprune
-		fi
+		echo ${yellow}'gitmultiprune'${reset}
+		gitmultiprune
 	elif [ $HOSTNAME = "Dell" ]; then
 		cd /d/Anton/repository/
 	fi
