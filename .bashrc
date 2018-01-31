@@ -10,7 +10,7 @@ source ~/completion.bash
 source ~/docker-completion.bash
 
 alias gitwary='git st | grep -v "\.php\|\.txt\|\.gif\|\.png\|\.css\|\.js\|\.jpg\|\.gitignore\|\.xml\|\.html\|\.ico\|\.config\|\.snp"'
-alias gitlogtoday='git log --pretty="%an %s" --since="0am"'
+alias gitlogtoday='git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short --since="0am"'
 
 alias gitnewbranch='~/bash/gitnewbranch.sh'
 alias gitmultipull='~/bash/gitmultipull.sh'
