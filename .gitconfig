@@ -30,4 +30,4 @@
 [winUpdater]
 	recentlySeenVersion = 2.15.1.windows.2
 [http]
-	postBuffer = 524288000
+	postBuffer = 1000000000
