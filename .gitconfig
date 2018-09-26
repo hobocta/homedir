@@ -31,3 +31,8 @@
 	recentlySeenVersion = 2.19.0.windows.1
 [http]
 	postBuffer = 1000000000
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
