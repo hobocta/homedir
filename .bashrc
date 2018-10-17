@@ -32,6 +32,9 @@ alias gsu='git submodule update'
 alias gp='git pull'
 alias gpsus='git pull && git submodule update && git st'
 alias gps='git push'
+gsf(){
+git symbolic-ref HEAD refs/heads/"$1"
+}
 alias composer='composer.phar'
 alias pu='phpunit.phar'
 alias php53='/f/OSPanel/modules/php/PHP-5.3/php.exe'
