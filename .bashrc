@@ -32,7 +32,7 @@ alias gsu='git submodule update'
 alias gp='git pull'
 alias gpsus='git pull && git submodule update && git st'
 alias gps='git push'
-gsf(){
+gsr(){
 git symbolic-ref HEAD refs/heads/"$1"
 }
 alias composer='composer.phar'
