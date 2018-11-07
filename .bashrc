@@ -40,7 +40,8 @@ alias composer='composer.phar'
 alias pu='phpunit.phar'
 alias php53='/f/OSPanel/modules/php/PHP-5.3/php.exe'
 alias php70='/f/OSPanel/modules/php/PHP-7-x64/php.exe'
-alias php7='/f/OSPanel/modules/php/PHP-7.1-x64/php.exe'
+alias php71='/f/OSPanel/modules/php/PHP-7.1-x64/php.exe'
+alias php72='/f/OSPanel/modules/php/PHP-7.2-x64/php.exe'
 
 red=`tput setaf 1`
 green=`tput setaf 2`
