@@ -65,3 +65,6 @@
 /Шаблоны/
 /.FBReader/
 /.docker/
+/.ipython/
+/.jupyter/
+/.matplotlib/
