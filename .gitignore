@@ -68,3 +68,6 @@
 /.ipython/
 /.jupyter/
 /.matplotlib/
+/.AndroidStudio3.2/
+/.emulator_console_auth_token
+/.ipynb_checkpoints
