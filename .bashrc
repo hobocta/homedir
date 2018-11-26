@@ -50,21 +50,3 @@ red=`tput setaf 1`
 green=`tput setaf 2`
 yellow=`tput setaf 3`
 reset=`tput sgr0`
-
-cd ~
-CHANGED=$(git status --porcelain)
-if [ -n "${CHANGED}" ]; then
-	git st
-else
-	if [ $HOSTNAME = "Panda" ] || [ $HOSTNAME = "Aspire" ]; then
-		cd /f/projects
-
-		echo ${yellow}'gitmultipull'${reset}
-		gitmultipull
-
-		echo ${yellow}'gitmultiprune'${reset}
-		gitmultiprune
-	elif [ $HOSTNAME = "Dell" ]; then
-		cd /d/Anton/repository/
-	fi
-fi
