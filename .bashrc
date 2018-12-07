@@ -37,7 +37,8 @@ gsr(){
 git symbolic-ref HEAD refs/heads/"$1"
 }
 alias composer='composer.phar'
-alias pu='phpunit.phar'
+alias phpunit='php ~/bin/phpunit-5.7.27.phar'
+alias pu='phpunit'
 alias php53='/f/OSPanel/modules/php/PHP-5.3/php.exe'
 alias php56='/f/OSPanel/modules/php/PHP-5.6/php.exe'
 alias php70='/f/OSPanel/modules/php/PHP-7-x64/php.exe'
