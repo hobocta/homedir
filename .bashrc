@@ -39,6 +39,8 @@ git symbolic-ref HEAD refs/heads/"$1"
 alias composer='composer.phar'
 alias phpunit='php ~/bin/phpunit-5.7.27.phar'
 alias pu='phpunit'
+alias phpcs='php72 ~/bin/php-cs-fixer-v2.phar'
+alias pc='phpcs'
 alias php53='/f/OSPanel/modules/php/PHP-5.3/php.exe'
 alias php54='/f/OSPanel/modules/php/PHP-5.4/php.exe'
 alias php55='/f/OSPanel/modules/php/PHP-5.5/php.exe'
