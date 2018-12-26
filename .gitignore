@@ -73,3 +73,5 @@
 /.ipynb_checkpoints
 /.nx/
 /OpenVPN/
+/.bundle/
+/.gem/
