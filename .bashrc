@@ -55,6 +55,7 @@ alias php72x32='/f/OSPanel/modules/php/PHP-7.2/php.exe'
 alias php72='/f/OSPanel/modules/php/PHP-7.2-x64/php.exe'
 alias python='winpty python'
 alias rabbitmqctl='rabbitmqctl.bat'
+alias hg='"/c/Program Files/TortoiseHg/hg.exe"'
 
 red=`tput setaf 1`
 green=`tput setaf 2`
