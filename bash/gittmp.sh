@@ -7,4 +7,6 @@ if [ -z "$number" ]; then
     exit
 fi
 
-mkdir tmp && git log -$number --name-only --no-commit-id --pretty="format:" | sort | uniq | xargs -I % cp --parents % tmp
+folder='tmp_'`date "+%Y-%m-%d-%H-%M-%S"`
+
+mkdir $folder && git log -$number --name-only --no-commit-id --pretty="format:" | sort | uniq | xargs -I % cp --parents % $folder
