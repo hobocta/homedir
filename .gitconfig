@@ -28,7 +28,7 @@
 [credential]
 	helper = !'C:\\Users\\Anton\\AppData\\Roaming\\GitCredStore\\git-credential-winstore.exe'
 [winUpdater]
-	recentlySeenVersion = 2.20.1.windows.1
+	recentlySeenVersion = 2.21.0.windows.1
 [http]
 	postBuffer = 1000000000
 [filter "lfs"]
