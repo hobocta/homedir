@@ -75,4 +75,4 @@
 /OpenVPN/
 /.bundle/
 /.gem/
-/.hgrc
+/hg-prompt/prompt.pyo
