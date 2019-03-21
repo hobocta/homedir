@@ -36,7 +36,7 @@ REM
 REM $Id$
 REM
 
-if "%PHPBIN%" == "" set PHPBIN="f:\OSPanel\modules\php\PHP_7.1-x64\php.exe"
+if "%PHPBIN%" == "" set PHPBIN="f:\OSPanel\modules\php\PHP_5.6\php.exe"
 if not exist "%PHPBIN%" if "%PHP_PEAR_PHP_BIN%" neq "" goto USE_PEAR_PATH
 GOTO RUN
 :USE_PEAR_PATH
