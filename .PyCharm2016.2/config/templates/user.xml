@@ -1,8 +1,0 @@
-<templateSet group="user">
-  <template name="sys.exit()" value="sys.exit()" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="Python" value="true" />
-      <option name="Python_Class" value="false" />
-    </context>
-  </template>
-</templateSet>
