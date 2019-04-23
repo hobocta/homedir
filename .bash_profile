@@ -8,14 +8,13 @@ cd ~
 CHANGED=$(git status --porcelain)
 if [ -n "${CHANGED}" ]; then
     git st
-# else
-#     if [ $HOSTNAME = "Panda" ] || [ $HOSTNAME = "Aspire" ]; then
-#         cd /f/projects
+else
+    if [ $HOSTNAME = "Panda" ] || [ $HOSTNAME = "Aspire" ]; then
+        cd /f/projects
 
-#         echo ${yellow}'gitmultipull'${reset}
-#         gitmultipull
-
-#         echo ${yellow}'gitmultiprune'${reset}
-#         gitmultiprune
-#     fi
+        # echo ${yellow}'gitmultipull'${reset}
+        # gitmultipull
+        # echo ${yellow}'gitmultiprune'${reset}
+        # gitmultiprune
+    fi
 fi
