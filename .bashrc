@@ -7,6 +7,7 @@ hg_ps1() {
     hg prompt "{ ({branch}}{ at {bookmark}}{status})" 2> /dev/null
 }
 
+source ~/git-subrepo/.rc
 source ~/git-flow-completion.bash
 source ~/go-completion.bash
 source ~/rabbitmqadmin-completion.d
