@@ -77,3 +77,4 @@
 /.gem/
 /hg-prompt/prompt.pyo
 /Creative Cloud Files/
+.git-credentials
