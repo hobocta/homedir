@@ -11,6 +11,8 @@
 	type = cat-file -t
 	dump = cat-file -p
 	lr = log --oneline --left-right
+[color]
+	ui = auto
 [core]
 	; for linux:
 	;autocrlf = input
@@ -21,8 +23,6 @@
 	filemode = false
 	pager = less -S -x1,5
 	quotepath = false
-[color]
-	ui = auto
 [push]
 	default = simple
 [credential]
