@@ -28,7 +28,7 @@
 [credential]
 	helper = store
 [winUpdater]
-	recentlySeenVersion = 2.24.0.windows.2
+	recentlySeenVersion = 2.24.1.windows.2
 [http]
 	postBuffer = 1000000000
 [filter "lfs"]
