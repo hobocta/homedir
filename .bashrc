@@ -64,6 +64,8 @@ alias hg='"/c/Program Files/TortoiseHg/hg.exe"'
 alias hgd='hg diff --color always | less -R'
 alias hgl='hg log --color always | less -R'
 
+alias dus='du -s *|sort -nr|cut -f 2-|while read a;do du -hs $a;done'
+
 red=`tput setaf 1`
 green=`tput setaf 2`
 yellow=`tput setaf 3`
