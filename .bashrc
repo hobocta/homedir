@@ -57,7 +57,7 @@ alias php72x32='/i/OSPanel/modules/php/PHP_7.2/php.exe'
 alias php72='/i/OSPanel/modules/php/PHP_7.2-x64/php.exe'
 alias php73x32='/i/OSPanel/modules/php/PHP_7.3/php.exe'
 alias php73='/i/OSPanel/modules/php/PHP_7.3-x64/php.exe'
-alias python='winpty python'
+alias python='winpty ~/AppData/Local/Programs/Python/Python38/python'
 alias python2='winpty /c/Python27/python.exe'
 alias rabbitmqctl='rabbitmqctl.bat'
 
