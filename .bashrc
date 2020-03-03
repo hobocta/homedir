@@ -67,6 +67,8 @@ alias hgl='hg log --color always | less -R'
 
 alias dus='du -s *|sort -nr|cut -f 2-|while read a;do du -hs $a;done'
 
+alias yarn='~/.yarn/bin/yarn'
+
 red=`tput setaf 1`
 green=`tput setaf 2`
 yellow=`tput setaf 3`
