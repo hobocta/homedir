@@ -1,86 +1,87 @@
+/.android/
+/.AndroidStudio3.0/
+/.AndroidStudio3.2/
+/.atom/
+/.bash_history
+/.bundle/
+/.cisco/vpn/log/
+/.config/
+/.dbshell
+/.docker/
+/.drush/
+/.emulator_console_auth_token
+/.erlang.cookie
+/.FBReader/
+/.fontconfig/
+/.gem/
+/.git-credentials
+/.git-for-windows-updater
+/.gnupg/
+/.gradle/
+/.idea/
+/.ipynb_checkpoints
+/.ipython/
+/.jupyter/
+/.matplotlib/
+/.minttyrc
+/.mongorc.js
+/.node-gyp/
+/.nx/
+/.oracle_jre_usage/
+/.pdepend/
+/.PhpStorm*
+/.PyCharm*
+/.soapui/
+/.soapuios/
+/.ssh/
+/.symfony/
+/.v8flags.*
+/.vagrant.d/
+/.viminfo
+/.VirtualBox/
+/.WebIde*
+/.yarn/
+/.yarnrc
+/3D Objects/
+/_viminfo
+/AndroidStudioProjects/
 /AppData/
 /Application Data/
 /Contacts/
 /Cookies/
+/Creative Cloud Files/
+/default-soapui-workspace.xml
 /Desktop/
 /Documents/
 /Downloads/
 /Favorites/
+/Google Диск/
+/hg-prompt/prompt.pyo
 /Intel/
 /IntelGraphicsProfiles/
 /Links/
 /Local Settings/
+/MicrosoftEdgeBackups/
 /Music/
+/NetHood/
 /ntuser*
 /NTUSER.*
 /OneDrive/
+/OpenVPN/
 /Pictures/
+/PrintHood/
 /Recent/
 /Saved Games/
 /Searches/
 /SendTo/
+/soapui-settings.xml
 /Sync/
+/tempLoadUI/
 /Tracing/
 /Videos/
+/VirtualBox VMs/
 /YandexDisk/
 /Главное меню/
-/Мои документы/
-/.bash_history
-/.config/
-/.erlang.cookie
-/.minttyrc
-/.ssh/
-/.v8flags.*
-/.viminfo
-/.fontconfig/
-/.oracle_jre_usage/
-/_viminfo
-/.VirtualBox/
-/.idea/
-/.WebIde*
-/.PyCharm*
-/.PhpStorm*
-/.pdepend/
-/.soapui/
-/default-soapui-workspace.xml
-/soapui-settings.xml
-/tempLoadUI/
-/.atom/
-/.dbshell
-/.mongorc.js
-/.soapuios/
-/.yarnrc
-/.AndroidStudio3.0/
-/.android/
-/.gradle/
-/AndroidStudioProjects/
-/Google Диск/
-/3D Objects/
-/MicrosoftEdgeBackups/
-/.node-gyp/
-/.drush/
 /главное меню/
-/NetHood/
-/PrintHood/
+/Мои документы/
 /Шаблоны/
-/.FBReader/
-/.docker/
-/.ipython/
-/.jupyter/
-/.matplotlib/
-/.AndroidStudio3.2/
-/.emulator_console_auth_token
-/.ipynb_checkpoints
-/.nx/
-/OpenVPN/
-/.bundle/
-/.gem/
-/hg-prompt/prompt.pyo
-/Creative Cloud Files/
-/.git-credentials
-/.cisco/vpn/log/
-/.git-for-windows-updater
-/.gnupg/
-/.yarn/
-/.vagrant.d/
-/VirtualBox VMs/
