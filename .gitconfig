@@ -23,6 +23,7 @@
 	filemode = false
 	pager = less -S -x1,5
 	quotepath = false
+	fscache = false
 [push]
 	default = simple
 [credential]
