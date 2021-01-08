@@ -4,6 +4,7 @@
 /.atom/
 /.bash_history
 /.bundle/
+/.cache/
 /.cisco/vpn/log/
 /.config/
 /.dbshell
