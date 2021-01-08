@@ -27,6 +27,7 @@
 /.minttyrc
 /.mongorc.js
 /.node-gyp/
+/.node_repl_history
 /.nx/
 /.oracle_jre_usage/
 /.pdepend/
@@ -70,6 +71,7 @@
 /NTUSER.*
 /OneDrive/
 /OpenVPN/
+/PhpstormProjects/
 /Pictures/
 /PrintHood/
 /Recent/
@@ -80,6 +82,7 @@
 /Start Menu/
 /Sync/
 /tempLoadUI/
+/tmp/
 /Tracing/
 /Videos/
 /VirtualBox VMs/
