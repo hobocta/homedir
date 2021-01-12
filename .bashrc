@@ -66,6 +66,10 @@ alias dus='du -s *|sort -nr|cut -f 2-|while read a;do du -hs $a;done'
 
 alias yarn='~/.yarn/bin/yarn'
 
+alias dc="docker-compose"
+alias dce="docker-compose exec"
+alias dcr="docker-compose run"
+
 red=`tput setaf 1`
 green=`tput setaf 2`
 yellow=`tput setaf 3`
