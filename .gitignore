@@ -10,6 +10,7 @@
 /.dbshell
 /.docker/
 /.drush/
+/.ebookreader/
 /.emulator_console_auth_token
 /.erlang.cookie
 /.FBReader/
