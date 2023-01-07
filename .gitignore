@@ -42,6 +42,7 @@
 /.vagrant.d/
 /.viminfo
 /.VirtualBox/
+/.vscode/
 /.WebIde*
 /.yarn/
 /.yarnrc
